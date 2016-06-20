@@ -1,0 +1,32 @@
+{
+  "name": "linter-hunspell",
+  "main": "./lib/linter-hunspell",
+  "version": "0.1.0",
+  "description": "Linter plugin for Atom using hunspell",
+  "keywords": [
+    "html",
+    "sgml",
+    "tex",
+    "latex",
+    "lint",
+    "linter"
+  ],
+  "activationCommands": [],
+  "repository": "https://github.com/yitzchak/linter-hunspell",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+  },
+  "package-deps": [
+    "linter"
+  ],
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  }
+}
