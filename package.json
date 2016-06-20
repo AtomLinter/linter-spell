@@ -1,6 +1,6 @@
 {
   "name": "linter-hunspell",
-  "main": "./lib/linter-hunspell",
+  "main": "./lib/main",
   "version": "0.1.0",
   "description": "Linter plugin for Atom using hunspell",
   "keywords": [
