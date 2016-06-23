@@ -7,6 +7,7 @@ describe('The hunspell provider for Atom Linter', () => {
 
   beforeEach(() => {
     waitsForPromise(() => {
+      atom.packages.activatePackage('language-latex')
       return atom.packages.activatePackage('linter-hunspell')
     })
   })
