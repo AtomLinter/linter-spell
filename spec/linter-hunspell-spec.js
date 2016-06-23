@@ -16,6 +16,9 @@ describe('The hunspell provider for Atom Linter', () => {
     waitsForPromise(() => {
       return atom.workspace.open(path.join(__dirname, 'files', 'foo.tex')).then(editor => {
         return lint(editor, "text.tex.latex").then(messages => {
+          for (const message of messages) {
+            console.log(message.text)
+          }
           expect(messages.length).toEqual(6)
           expect(messages[0].type).toEqual('Warning')
           expect(messages[0].text).toEqual('Gregor: Gregory, Greg, or, Greg-or, Gregorio, Regor, Oregon, Forego')
