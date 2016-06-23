@@ -1,5 +1,6 @@
 'use babel'
 
+import * as _ from 'lodash'
 import * as path from 'path'
 
 describe('The hunspell provider for Atom Linter', () => {
@@ -19,9 +20,8 @@ describe('The hunspell provider for Atom Linter', () => {
           for (const message of messages) {
             console.log(message.text)
           }
-          expect(messages.length).toEqual(6)
-          expect(messages[0].type).toEqual('Warning')
-          expect(messages[0].text).toEqual('Gregor: Gregory, Greg, or, Greg-or, Gregorio, Regor, Oregon, Forego')
+          expect(_.some(messages, (message) => { return message.text.match(/^armour(:|$)/) })).toBe(true)
+          expect(_.some(messages, (message) => { return message.text.match(/^travelling(:|$)/) })).toBe(true)
         })
       })
     })
