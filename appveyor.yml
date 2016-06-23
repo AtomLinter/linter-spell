@@ -19,6 +19,7 @@ environment:
 
 install:
   - ps: Install-Product node 5
+  - ps: Install-Package NHunspell
 
 build_script:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/atom/ci/master/build-package.ps1'))
