@@ -31,7 +31,7 @@ addons:
     - libgnome-keyring-dev
     - fakeroot
     - hunspell
-    - hunspell-en_us
+    - hunspell-en-us
 
 branches:
   only:
