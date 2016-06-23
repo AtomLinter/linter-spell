@@ -14,11 +14,10 @@ describe('The hunspell provider for Atom Linter', () => {
   it('finds a spelling in "foo.tex"', () => {
     waitsForPromise(() => {
       return atom.workspace.open(path.join(__dirname, 'files', 'foo.tex')).then(editor => {
-        return lint(editor).then(messages => {
-          console.log(messages)
-          expect(messages.length).toEqual(1)
+        return lint(editor, "text.tex.latex").then(messages => {
+          expect(messages.length).toEqual(6)
           expect(messages[0].type).toEqual('Warning')
-          expect(messages[0].text).toEqual('ghj')
+          expect(messages[0].text).toEqual('Gregor: Gregory, Greg, or, Greg-or, Gregorio, Regor, Oregon, Forego')
         })
       })
     })
