@@ -4,7 +4,7 @@ notifications:
     on_failure: change
 
 script:
-  - curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh
+  - script/travis-ci-build.sh
 
 git:
   depth: 10
@@ -34,7 +34,7 @@ addons:
     - hunspell-en-us
 
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; brew install hunspell; fi
+  - script/travis-ci-before-install.sh
 
 branches:
   only:
