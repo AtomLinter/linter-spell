@@ -108,6 +108,13 @@
       "waitsForPromise"
     ]
   },
+  "consumedServices": {
+    "linter-plus-self": {
+      "versions": {
+        "0.1.0": "consumeLinter"
+      }
+    }
+  },
   "providedServices": {
     "intentions:list": {
       "versions": {
