@@ -1,4 +1,4 @@
-# linter-hunspell [![Travis-CI Build Status](https://img.shields.io/travis/yitzchak/linter-hunspell/master.svg)](https://travis-ci.org/yitzchak/linter-hunspell) [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/yitzchak/linter-hunspell/master.svg)](https://ci.appveyor.com/project/yitzchak/linter-hunspell)
+# linter-hunspell [![Travis-CI Build Status](https://img.shields.io/travis/yitzchak/linter-hunspell/master.svg?label=Linux/OSX%20build)](https://travis-ci.org/yitzchak/linter-hunspell) [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/yitzchak/linter-hunspell/master.svg?label=Windows%20build)](https://ci.appveyor.com/project/yitzchak/linter-hunspell)
 
 Atom Linter plugin for hunspell
 
