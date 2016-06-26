@@ -23,7 +23,8 @@
     "lodash": "*"
   },
   "package-deps": [
-    "linter"
+    "linter",
+    "intentions"
   ],
   "configSchema": {
     "hunspellPath": {
@@ -108,6 +109,11 @@
     ]
   },
   "providedServices": {
+    "intentions:list": {
+      "versions": {
+        "1.0.0": "provideIntentions"
+      }
+    },
     "linter": {
       "versions": {
         "1.0.0": "provideLinter"
