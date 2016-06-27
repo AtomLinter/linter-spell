@@ -1,7 +1,7 @@
 {
   "name": "linter-spell",
   "main": "./lib/main",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Linter plugin for Atom using hunspell. Checks the spelling of TeX, LaTeX, HTML, SGML, XML and plain text files.",
   "keywords": [
     "html",
@@ -16,7 +16,10 @@
   "repository": "https://github.com/yitzchak/linter-spell",
   "license": "MIT",
   "engines": {
-    "atom": ">=0.174.0 <2.0.0"
+    "atom": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/yitzchak/linter-spell/issues"
   },
   "dependencies": {
     "os-locale": "*",
