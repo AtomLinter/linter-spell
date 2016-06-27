@@ -2,7 +2,7 @@
   "name": "linter-spell",
   "main": "./lib/main",
   "version": "0.0.0",
-  "description": "Linter plugin for Atom using hunspell. Checks the spelling of TeX, LaTeX, HTML, SGML, XML and plain text files.",
+  "description": "Linter plugin for Atom using ispell compatible interface such as aspell, hunspell, enchant, etc.",
   "keywords": [
     "html",
     "sgml",
@@ -30,9 +30,9 @@
     "intentions"
   ],
   "configSchema": {
-    "hunspellPath": {
-      "title": "Hunspell Path",
-      "description": "The full path to your copy of Hunspell.",
+    "spellPath": {
+      "title": "Spell Path",
+      "description": "The path to your copy of Ispell compatible program such as aspell, hunspell, etc.",
       "type": "string",
       "default": "hunspell",
       "order": 1
@@ -43,55 +43,6 @@
       "type": "array",
       "default": [],
       "order": 2
-    },
-    "texEnable": {
-      "type": "boolean",
-      "default": true,
-      "order": 3
-    },
-    "texGrammarScopes": {
-      "title": "TeX Grammar Scopes",
-      "description": "The grammar scopes to use for TeX spell checking.",
-      "type": "array",
-      "default": ["text.tex", "text.tex.latex"],
-      "order": 4
-    },
-    "htmlEnable": {
-      "type": "boolean",
-      "default": true,
-      "order": 5
-    },
-    "htmlGrammarScopes": {
-      "title": "HTML Grammar Scopes",
-      "description": "The grammar scopes to use for HTML spell checking.",
-      "type": "array",
-      "default": ["text.html.basic"],
-      "order": 6
-    },
-    "xmlEnable": {
-      "type": "boolean",
-      "default": true,
-      "order": 7
-    },
-    "xmlGrammarScopes": {
-      "title": "XML Grammar Scopes",
-      "description": "The grammar scopes to use for XML spell checking.",
-      "type": "array",
-      "default": ["text.xml"],
-      "order": 8
-    },
-    "plainEnable": {
-      "title": "Plain Text Enable",
-      "type": "boolean",
-      "default": true,
-      "order": 9
-    },
-    "plainGrammarScopes": {
-      "title": "Plain Text Grammar Scopes",
-      "description": "The grammar scopes to use for Plain Text spell checking.",
-      "type": "array",
-      "default": ["text.plain"],
-      "order": 10
     }
   },
   "standard": {
