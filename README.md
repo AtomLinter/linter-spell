@@ -8,11 +8,13 @@ package manager. If it was you would use the Atom package manager and search for
 "linter-spell", or run `apm install linter-spell` from the command line.
 
 ## Prerequisites
-This package relies upon `hunspell` and it must therefore be installed.
+This package relies on a `ispell` compatible package such as `hunspell`.
 
-## Magic comments
-The package has support for the following Tex Magic comment
-- `% !TEX spellcheck = en_US,en_DE` Select dictionaries
+## Providers
+Spell checking plain text documents is included in the package. To spell check
+other document types use a `linter-spell-grammar` provider:
+
+  * LaTeX - [!(https://github.com/yitzchak/linter-spell-latex)](linter-spell-latex)
 
 ## Status
-Please note that this package is in a **alpha** state.
+Please note that this package is in an **alpha** state.

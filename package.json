@@ -63,7 +63,7 @@
     ]
   },
   "consumedServices": {
-    "linter-spell:grammar": {
+    "linter-spell-grammar": {
       "versions": {
         "1.0.0": "consumeGrammar"
       }
@@ -75,7 +75,7 @@
     }
   },
   "providedServices": {
-    "linter-spell:grammar": {
+    "linter-spell-grammar": {
       "versions": {
         "1.0.0": "provideGrammar"
       }
