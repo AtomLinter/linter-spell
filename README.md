@@ -25,7 +25,7 @@ corrected or added to personal dictionary using the
 Spell checking plain text documents is included in the package. To spell check
 other document types use a `linter-spell-grammar` provider:
 
-  * LaTeX - [linter-spell-latex](https://atom.io/packages/linter-spell-latex)
+*  LaTeX - [linter-spell-latex](https://atom.io/packages/linter-spell-latex)
 
 ## Creating New Providers
 
