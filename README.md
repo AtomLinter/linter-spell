@@ -50,17 +50,19 @@ The provided service should be as follows
       }]
     }
 
+Multiple grammars can be provides by returning an array.
+
 The `getDictionaries` method is optional and should scan `texEditor` for a
 file specific override of the user's default dictionaries and return `[]` if
 no dictionary references were found. See
 [linter-spell-latex](https://atom.io/packages/linter-spell-latex)
 for an implementation using TeX magic comments.
 
-The `getRanges` method should check the `ranges` parameter for text to ranges
-which are valid to spell check. It should return a list of modified ranges in
-`ranges` and can also return `ignoredRanges` for ranges that should not be
-checked. The interval difference between `ranges` and `ignoredRanges` will
-actually be checked.
+The `getRanges` method should check the `ranges` parameter for sub-ranges
+within each ranges which are valid to spell check. It should return a list
+of modified ranges in `ranges` and can also return `ignoredRanges` for
+ranges that should not be checked. The interval difference between `ranges`
+and `ignoredRanges` will actually be checked.
 
 ## Status
 
