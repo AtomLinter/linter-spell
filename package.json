@@ -4,15 +4,11 @@
   "version": "0.0.0",
   "description": "Linter plugin for Atom using ispell compatible interface such as aspell, hunspell, enchant, etc.",
   "keywords": [
-    "html",
-    "sgml",
-    "xml",
-    "tex",
-    "latex",
     "lint",
-    "linter"
+    "linter",
+    "spelling",
+    "spellcheck"
   ],
-  "activationCommands": [],
   "repository": "https://github.com/yitzchak/linter-spell",
   "license": "MIT",
   "engines": {
