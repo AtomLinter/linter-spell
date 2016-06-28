@@ -8,15 +8,14 @@ describe('The hunspell provider for Atom Linter', () => {
 
   beforeEach(() => {
     waitsForPromise(() => {
-      atom.packages.activatePackage('language-latex')
       return atom.packages.activatePackage('linter-spell')
     })
   })
 
-  it('finds a spelling in "foo.tex"', () => {
+  it('finds a spelling in "foo.txt"', () => {
     waitsForPromise(() => {
-      return atom.workspace.open(path.join(__dirname, 'files', 'foo.tex')).then(editor => {
-        return lint(editor, 'text.tex.latex').then(messages => {
+      return atom.workspace.open(path.join(__dirname, 'files', 'foo.txt')).then(editor => {
+        return lint(editor, 'text.plain').then(messages => {
           expect(_.some(messages, (message) => { return message.text.match(/^armour(:|$)/) })).toBe(true)
           // expect(_.some(messages, (message) => { return message.text.match(/^travelling(:|$)/) })).toBe(true)
         })

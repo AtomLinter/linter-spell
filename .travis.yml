@@ -17,7 +17,7 @@ os:
 
 env:
   global:
-    - APM_TEST_PACKAGES="language-latex"
+    - APM_TEST_PACKAGES=""
 
   matrix:
     - ATOM_CHANNEL=stable
