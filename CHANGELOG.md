@@ -1,2 +1,2 @@
 ## 0.1.0 - First Release
-* Nothing yet
+* Initial release
