@@ -1,6 +1,7 @@
 # linter-spell [![Travis-CI Build Status](https://img.shields.io/travis/yitzchak/linter-spell/master.svg?label=Linux/OSX%20build)](https://travis-ci.org/yitzchak/linter-spell) [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/yitzchak/linter-spell/master.svg?label=Windows%20build)](https://ci.appveyor.com/project/yitzchak/linter-spell)
 
-Atom Linter plugin for hunspell.
+Linter plugin for Atom using ispell compatible interface such as aspell,
+hunspell, enchant, etc.
 
 ## Installing
 
@@ -14,9 +15,9 @@ This package relies on a `ispell` compatible package such as `hunspell`.
 ## Usage
 
 Spell checking is done upon document save with misspellings displayed by
-[![linter](https://atom.io/packages/linter)](linter). Misspellings can be
+[linter](https://atom.io/packages/linter)]. Misspellings can be
 corrected or added to personal dictionary using the
-[![intentions](https://atom.io/packages/intentions)](intentions) package via
+[intentions](https://atom.io/packages/intentions) package via
 `ctrl` + `enter` on OSX and `alt` + `enter` on Linux and Windows.
 
 ## Providers
@@ -24,7 +25,7 @@ corrected or added to personal dictionary using the
 Spell checking plain text documents is included in the package. To spell check
 other document types use a `linter-spell-grammar` provider:
 
-  * LaTeX - [![linter-spell-latex](https://atom.io/packages/linter-spell-latex)](linter-spell-latex)
+  * LaTeX - [linter-spell-latex](https://atom.io/packages/linter-spell-latex)
 
 ## Creating New Providers
 
@@ -51,8 +52,8 @@ The provided service should be as follows
 
 The `getDictionaries` method is optional and should scan `texEditor` for a
 file specific override of the user's default dictionaries and return `[]` if
-no dictionary references were found. See 
-[![linter-spell-latex](https://atom.io/packages/linter-spell-latex)](linter-spell-latex)
+no dictionary references were found. See
+[linter-spell-latex](https://atom.io/packages/linter-spell-latex)
 for an implementation using TeX magic comments.
 
 The `getRanges` method should check the `ranges` parameter for text to ranges
