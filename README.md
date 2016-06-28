@@ -15,7 +15,7 @@ This package relies on a `ispell` compatible package such as `hunspell`.
 ## Usage
 
 Spell checking is done upon document save with misspellings displayed by
-[linter](https://atom.io/packages/linter)]. Misspellings can be
+[linter](https://atom.io/packages/linter). Misspellings can be
 corrected or added to personal dictionary using the
 [intentions](https://atom.io/packages/intentions) package via
 `ctrl` + `enter` on OSX and `alt` + `enter` on Linux and Windows.
