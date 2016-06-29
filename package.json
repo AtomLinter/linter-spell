@@ -12,14 +12,15 @@
   "repository": "https://github.com/yitzchak/linter-spell",
   "license": "MIT",
   "engines": {
-    "atom": "*"
+    "atom": ">=1.0.0"
   },
   "bugs": {
     "url": "https://github.com/yitzchak/linter-spell/issues"
   },
   "dependencies": {
-    "os-locale": "*",
-    "lodash": "*"
+    "os-locale": "^1.4.0",
+    "lodash": "^4.13.0",
+    "atom-package-deps": "^4.0.0"
   },
   "package-deps": [
     "linter",
