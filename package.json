@@ -1,7 +1,7 @@
 {
   "name": "linter-spell",
   "main": "./lib/main",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Linter plugin for Atom using ispell compatible interface such as aspell, hunspell, enchant, etc.",
   "keywords": [
     "lint",
