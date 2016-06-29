@@ -19,8 +19,7 @@
   },
   "dependencies": {
     "os-locale": "*",
-    "lodash": "*",
-    "atom-package-deps": "*"
+    "lodash": "*"
   },
   "package-deps": [
     "linter",
