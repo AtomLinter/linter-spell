@@ -46,7 +46,7 @@ The provided service should be as follows
       return [{
         grammarScopes: ['source.gfm'],
         getDictionaries: textEditor => { return ['en_US'] },
-        ignoredScopes: ['.link .markup.underline.link.gfm']
+        ignoredScopes: ['.link .markup.underline.link.gfm'],
         getRanges: (textEditor, ranges) => { return { ranges: ranges, ignoredRanges: [] } }
       }]
     }
