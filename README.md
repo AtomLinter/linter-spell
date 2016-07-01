@@ -44,19 +44,25 @@ The provided service should be as follows
 
     provideGrammar () {
       return [{
-        grammarScopes: ['text.plain'],
+        grammarScopes: ['source.gfm'],
         getDictionaries: textEditor => { return ['en_US'] },
+        ignoredScopes: ['.link .markup.underline.link.gfm']
         getRanges: (textEditor, ranges) => { return { ranges: ranges, ignoredRanges: [] } }
       }]
     }
 
-Multiple grammars can be provides by returning an array.
+Multiple grammars can be provides by returning an array. `grammarScopes` is
+required, but all methods are optional.
 
-The `getDictionaries` method is optional and should scan `texEditor` for a
+The `getDictionaries` method should scan `texEditor` for a
 file specific override of the user's default dictionaries and return `[]` if
 no dictionary references were found. See
 [linter-spell-latex](https://atom.io/packages/linter-spell-latex)
 for an implementation using TeX magic comments.
+
+The `ignoredScopes` list the dotted sub-path of grammar scopes to ignore. For
+instance, `.link .markup.underline.link.gfm` will match
+`.foo .link .markup.underline.link.gfm .bar`
 
 The `getRanges` method should check the `ranges` parameter for sub-ranges
 within each ranges which are valid to spell check. It should return a list
