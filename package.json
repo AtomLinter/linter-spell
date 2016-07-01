@@ -66,11 +66,6 @@
         "1.0.0": "consumeGrammar"
       }
     },
-    "linter-spell-scopes": {
-      "versions": {
-        "1.0.0": "consumeScopes"
-      }
-    },
     "linter-plus-self": {
       "versions": {
         "0.1.0": "consumeLinter"
@@ -78,9 +73,9 @@
     }
   },
   "providedServices": {
-    "linter-spell-scopes": {
+    "linter-spell-grammar": {
       "versions": {
-        "1.0.0": "provideScopes"
+        "1.0.0": "provideGrammar"
       }
     },
     "intentions:list": {
