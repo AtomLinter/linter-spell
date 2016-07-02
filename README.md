@@ -1,4 +1,5 @@
 # linter-spell [![Travis-CI Build Status](https://img.shields.io/travis/yitzchak/linter-spell/master.svg?label=Linux/OSX%20build)](https://travis-ci.org/yitzchak/linter-spell) [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/yitzchak/linter-spell/master.svg?label=Windows%20build)](https://ci.appveyor.com/project/yitzchak/linter-spell)
+[![David](https://img.shields.io/david/yitzchak/linter-spell.svg)](https://david-dm.org/yitzchak/linter-spell)
 
 Linter plugin for Atom using ispell compatible interface such as aspell,
 hunspell, enchant, etc.
@@ -25,6 +26,7 @@ corrected or added to personal dictionary using the
 Spell checking plain text documents is included in the package. To spell check
 other document types use a `linter-spell-grammar` provider:
 
+*  HTML - [linter-spell-html](https://atom.io/packages/linter-spell-html)
 *  LaTeX - [linter-spell-latex](https://atom.io/packages/linter-spell-latex)
 
 ## Creating New Providers
