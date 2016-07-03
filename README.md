@@ -27,8 +27,10 @@ Spell checking plain text, Markdown, or AsciiDoc documents is included in the
 package. To spell check other document types use a `linter-spell-grammar`
 provider:
 
-*  HTML - [linter-spell-html](https://atom.io/packages/linter-spell-html)
-*  LaTeX & BibTeX - [linter-spell-latex](https://atom.io/packages/linter-spell-latex)
+| Grammar             | Atom Package                                                      |
+|---------------------|-------------------------------------------------------------------|
+| HTML                | [linter-spell-html](https://atom.io/packages/linter-spell-html)   |
+| TeX, LaTeX & BibTeX | [linter-spell-latex](https://atom.io/packages/linter-spell-latex) |
 
 ## Creating New Providers
 
@@ -59,7 +61,7 @@ The provided service should be as follows
 Multiple grammars can be provides by returning an array. `grammarScopes` is
 required, but all other properties and methods are optional.
 
-The `getDictionaries` method should scan `texEditor` for a
+The `getDictionaries` method should scan `textEditor` for a
 file specific override of the user's default dictionaries and return `[]` if
 no dictionary references were found. See
 [linter-spell-latex](https://atom.io/packages/linter-spell-latex)
