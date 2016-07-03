@@ -3,6 +3,8 @@
 ## 0.4.0
 
 *   Updated to hierarchical scoping
+*   Force save of personal dictionary in `addWord`
+*   Improve process handling in `Spell`
 
 ## 0.3.0
 

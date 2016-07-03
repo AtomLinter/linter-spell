@@ -16,7 +16,7 @@ describe('The hunspell provider for Atom Linter', () => {
     waitsForPromise(() => {
       return atom.workspace.open(path.join(__dirname, 'files', 'foo.txt')).then(editor => {
         return lint(editor).then(messages => {
-          expect(_.some(messages, (message) => { return message.text.match(/^armour(:|$)/) })).toBe(true)
+          expect(_.some(messages, (message) => { return message.text.match(/^armour( ->|$)/) })).toBe(true)
           // expect(_.some(messages, (message) => { return message.text.match(/^travelling(:|$)/) })).toBe(true)
         })
       })
