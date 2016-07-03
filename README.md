@@ -32,7 +32,7 @@ provider:
 | HTML                | [linter-spell-html](https://atom.io/packages/linter-spell-html)   |
 | TeX, LaTeX & BibTeX | [linter-spell-latex](https://atom.io/packages/linter-spell-latex) |
 
-## Creating New Providers
+## Creating New Provider
 
 New grammars can be added by implementing a `linter-spell-grammar` provider.
 This can be done by adding the following to `package.json`
