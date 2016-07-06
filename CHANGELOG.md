@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.5.0
+
+*   Restore `getRanges`
+*   Fix range overflow bug
+
 ## 0.4.0
 
 *   Updated to hierarchical scoping

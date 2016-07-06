@@ -54,6 +54,12 @@ The provided service should be as follows
         checkedScopes: {
           'source.gfm': true,
           'markup.underline.link.gfm': false
+        },
+        getRanges: (textEditor, ranges) => {
+          return {
+            ranges: ranges,
+            ignoredRanges: []
+          }
         }
       }]
     }
@@ -72,6 +78,12 @@ To explicitly check a scope use a value of `true`, while `false` will ignore
 that scope. If this property is not provided then all scopes in `grammarScopes`
 will be checked. When it is provided all scopes default to ignored unless
 specified with a `true` value.
+
+The `getRanges` method should check the `ranges` parameter for sub-ranges
+within each ranges which are valid to spell check. It should return a list
+of modified ranges in `ranges` and can also return `ignoredRanges` for
+ranges that should not be checked. The interval difference between `ranges`
+and `ignoredRanges` will actually be checked.
 
 ## Status
 
