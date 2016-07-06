@@ -27,10 +27,11 @@ Spell checking plain text, Markdown, or AsciiDoc documents is included in the
 package. To spell check other document types use a `linter-spell-grammar`
 provider:
 
-| Grammar             | Atom Package                                                      |
-|---------------------|-------------------------------------------------------------------|
-| HTML                | [linter-spell-html](https://atom.io/packages/linter-spell-html)   |
-| TeX, LaTeX & BibTeX | [linter-spell-latex](https://atom.io/packages/linter-spell-latex) |
+| Grammar             | Atom Package                                                                |
+|---------------------|-----------------------------------------------------------------------------|
+| HTML                | [linter-spell-html](https://atom.io/packages/linter-spell-html)             |
+| Javascript          | [linter-spell-javascript](https://atom.io/packages/linter-spell-javascript) |
+| TeX, LaTeX & BibTeX | [linter-spell-latex](https://atom.io/packages/linter-spell-latex)           |
 
 ## Creating New Provider
 
