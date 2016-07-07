@@ -27,11 +27,15 @@ Spell checking plain text, Markdown, or AsciiDoc documents is included in the
 package. To spell check other document types use a `linter-spell-grammar`
 provider:
 
-| Grammar             | Atom Package                                                                |
-|---------------------|-----------------------------------------------------------------------------|
-| HTML                | [linter-spell-html](https://atom.io/packages/linter-spell-html)             |
-| Javascript          | [linter-spell-javascript](https://atom.io/packages/linter-spell-javascript) |
-| TeX, LaTeX & BibTeX | [linter-spell-latex](https://atom.io/packages/linter-spell-latex)           |
+| Grammar                  | Spell Package                                                               | Grammar Package                                                     |
+|--------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------|
+| AsciiDoc                 | Included in linter-spell                                                    | [language-asciidoc](https://atom.io/packages/language-asciidoc)     |
+| Git Commit Message       | Included in linter-spell                                                    | [language-git](https://atom.io/packages/language-git)               |
+| GitHub flavored Markdown | Included in linter-spell                                                    | [language-gfm](https://atom.io/packages/language-gfm)               |
+| HTML                     | [linter-spell-html](https://atom.io/packages/linter-spell-html)             | [language-html](https://atom.io/packages/language-html)             |
+| Javascript               | [linter-spell-javascript](https://atom.io/packages/linter-spell-javascript) | [language-javascript](https://atom.io/packages/language-javascript) |
+| LaTeX, TeX & BibTeX      | [linter-spell-latex](https://atom.io/packages/linter-spell-latex)           | [language-latex](https://atom.io/packages/language-latex)           |
+| Plain Text               | Included in linter-spell                                                    | [language-text](https://atom.io/packages/language-text)             |
 
 ## Creating New Provider
 
