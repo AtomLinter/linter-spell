@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.6.0
+
+*   Add personal dictionary option
+*   Improve git commit spell checking
+*   Improve AsciiDoc spell checking
+*   Add AsciiDoc lang attribute parsing
+*   Fix text range in case of lines that lead with Ispell command
+
 ## 0.5.0
 
 *   Restore `getRanges`

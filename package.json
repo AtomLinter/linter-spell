@@ -41,6 +41,13 @@
       "type": "array",
       "default": [],
       "order": 2
+    },
+    "personalDictionaryPath": {
+      "title": "Personal Dictionary Path",
+      "description": "The path to your personal dictionary.",
+      "type": "string",
+      "default": "",
+      "order": 3
     }
   },
   "standard": {

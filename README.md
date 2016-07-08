@@ -1,4 +1,6 @@
-# linter-spell [![Travis-CI Build Status](https://img.shields.io/travis/yitzchak/linter-spell/master.svg?label=Linux/OSX%20build)](https://travis-ci.org/yitzchak/linter-spell) [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/yitzchak/linter-spell/master.svg?label=Windows%20build)](https://ci.appveyor.com/project/yitzchak/linter-spell) [![David](https://img.shields.io/david/yitzchak/linter-spell.svg)](https://david-dm.org/yitzchak/linter-spell)
+# linter-spell
+
+[![Travis-CI Build Status](https://img.shields.io/travis/yitzchak/linter-spell/master.svg?label=Linux/OSX%20build)](https://travis-ci.org/yitzchak/linter-spell) [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/yitzchak/linter-spell/master.svg?label=Windows%20build)](https://ci.appveyor.com/project/yitzchak/linter-spell) [![David](https://img.shields.io/david/yitzchak/linter-spell.svg)](https://david-dm.org/yitzchak/linter-spell)
 
 Linter plugin for Atom using Ispell compatible interface such as [GNU Aspell](http://aspell.net/),
 [Hunspell](https://hunspell.github.io/) or [Enchant](http://www.abisource.com/projects/enchant/).
@@ -27,15 +29,15 @@ Spell checking plain text, Markdown, or AsciiDoc documents is included in the
 package. To spell check other document types use a `linter-spell-grammar`
 provider:
 
-| Grammar                  | Spell Package                                                               | Grammar Package                                                     |
-|--------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------|
-| AsciiDoc                 | Included in linter-spell                                                    | [language-asciidoc](https://atom.io/packages/language-asciidoc)     |
-| Git Commit Message       | Included in linter-spell                                                    | [language-git](https://atom.io/packages/language-git)               |
-| GitHub flavored Markdown | Included in linter-spell                                                    | [language-gfm](https://atom.io/packages/language-gfm)               |
-| HTML                     | [linter-spell-html](https://atom.io/packages/linter-spell-html)             | [language-html](https://atom.io/packages/language-html)             |
-| Javascript               | [linter-spell-javascript](https://atom.io/packages/linter-spell-javascript) | [language-javascript](https://atom.io/packages/language-javascript) |
-| LaTeX, TeX & BibTeX      | [linter-spell-latex](https://atom.io/packages/linter-spell-latex)           | [language-latex](https://atom.io/packages/language-latex)           |
-| Plain Text               | Included in linter-spell                                                    | [language-text](https://atom.io/packages/language-text)             |
+| Grammar                  | Spell Package                                                               | Grammar Package                                                     | File Specific Dictionary            |
+|--------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------|-------------------------------------|
+| AsciiDoc                 | Included in linter-spell                                                    | [language-asciidoc](https://atom.io/packages/language-asciidoc)     | `:lang:` attribute                  |
+| Git Commit Message       | Included in linter-spell                                                    | [language-git](https://atom.io/packages/language-git)               | None                                |
+| GitHub flavored Markdown | Included in linter-spell                                                    | [language-gfm](https://atom.io/packages/language-gfm)               | None                                |
+| HTML                     | [linter-spell-html](https://atom.io/packages/linter-spell-html)             | [language-html](https://atom.io/packages/language-html)             | `lang` attribute                    |
+| Javascript               | [linter-spell-javascript](https://atom.io/packages/linter-spell-javascript) | [language-javascript](https://atom.io/packages/language-javascript) | None                                |
+| LaTeX, TeX & BibTeX      | [linter-spell-latex](https://atom.io/packages/linter-spell-latex)           | [language-latex](https://atom.io/packages/language-latex)           | `%!TeX spellcheck` magic comment    |
+| Plain Text               | Included in linter-spell                                                    | [language-text](https://atom.io/packages/language-text)             | None                                |
 
 ## Creating New Provider
 
@@ -92,4 +94,4 @@ and `ignoredRanges` will actually be checked.
 
 ## Status
 
-Please note that this package is in an **alpha** state.
+Please note that this package is in an **beta** state.
