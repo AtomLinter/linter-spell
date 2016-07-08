@@ -8,7 +8,9 @@
     "lint",
     "linter",
     "spelling",
-    "spellcheck"
+    "spellcheck",
+    "asciidoc",
+    "markdown"
   ],
   "repository": "https://github.com/yitzchak/linter-spell",
   "license": "MIT",
