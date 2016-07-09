@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.7.0
+
+*   Improve language selection
+
 ## 0.6.0
 
 *   Add personal dictionary option

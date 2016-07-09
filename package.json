@@ -23,7 +23,9 @@
   "dependencies": {
     "os-locale": "^1.4.0",
     "lodash": "^4.13.0",
-    "atom-package-deps": "^4.0.0"
+    "atom-package-deps": "^4.0.0",
+    "language-tags": "^1.0.0",
+    "cldr-data": "^29.0.0"
   },
   "package-deps": [
     "linter",
