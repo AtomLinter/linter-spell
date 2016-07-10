@@ -78,7 +78,9 @@ The `getDictionaries` method should scan `textEditor` for a
 file specific override of the user's default dictionaries and return `[]` if
 no dictionary references were found. See
 [linter&#x2011;spell&#x2011;latex](https://atom.io/packages/linter-spell-latex)
-for an implementation using TeX magic comments.
+for an implementation using TeX magic comments. [RFC 5646](http://www.rfc-editor.org/rfc/rfc5646.txt)
+language codes may also be returned and `linter-spell` will try to infer which
+dictionary to use. 
 
 The `checkedScopes` list the grammar scopes that either checked or ignored.
 To explicitly check a scope use a value of `true`, while `false` will ignore
