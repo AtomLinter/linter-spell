@@ -1,9 +1,11 @@
 # linter-spell
 
-[![Travis&#x2011;CI Build Status](https://img.shields.io/travis/yitzchak/linter-spell/master.svg?label=Linux/OSX%20build)](https://travis-ci.org/yitzchak/linter-spell) [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/yitzchak/linter-spell/master.svg?label=Windows%20build)](https://ci.appveyor.com/project/yitzchak/linter-spell) [![David](https://img.shields.io/david/yitzchak/linter-spell.svg)](https://david-dm.org/yitzchak/linter-spell)
+[![Travis&#x2011;CI Build Status](http://img.shields.io/travis/yitzchak/linter-spell/master.svg?label=Linux/OSX%20build)](http://travis-ci.org/yitzchak/linter-spell) [![AppVeyor Build Status](http://img.shields.io/appveyor/ci/yitzchak/linter-spell/master.svg?label=Windows%20build)](http://ci.appveyor.com/project/yitzchak/linter-spell) [![David](http://img.shields.io/david/yitzchak/linter-spell.svg)](http://david-dm.org/yitzchak/linter-spell)
 
-Linter plugin for Atom using Ispell compatible interface such as [GNU Aspell](http://aspell.net/),
-[Hunspell](https://hunspell.github.io/) or [Enchant](http://www.abisource.com/projects/enchant/).
+Multilingual grammar-specific spell checking for [Atom](http://atom.io) and
+[linter](http://atom.io/packages/linter) using Ispell compatible interface such
+as [GNU Aspell](http://aspell.net/), [Hunspell](http://hunspell.github.io/) or
+[Enchant](http://www.abisource.com/projects/enchant/).
 
 ## Installing
 
@@ -13,14 +15,14 @@ Use the Atom package manager and search for "linter-spell", or run
 ## Prerequisites
 
 This package relies on a `Ispell` compatible package such as [GNU Aspell](http://aspell.net/),
-[Hunspell](https://hunspell.github.io/) or [Enchant](http://www.abisource.com/projects/enchant/).
+[Hunspell](http://hunspell.github.io/) or [Enchant](http://www.abisource.com/projects/enchant/).
 
 ## Usage
 
 Spell checking is done upon document save with misspellings displayed by
-[linter](https://atom.io/packages/linter). Misspellings can be
+[linter](http://atom.io/packages/linter). Misspellings can be
 corrected or added to personal dictionary using the
-[intentions](https://atom.io/packages/intentions) package via
+[intentions](http://atom.io/packages/intentions) package via
 `ctrl` + `enter` on OSX and `alt` + `enter` on Linux and Windows.
 
 ## Providers
@@ -31,13 +33,13 @@ provider:
 
 | Grammar                  | Spell Package                                                               | Grammar Package                                                     | File Specific Dictionary            |
 |--------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------|-------------------------------------|
-| AsciiDoc                 | Included in linter&#x2011;spell                                                    | [language&#x2011;asciidoc](https://atom.io/packages/language-asciidoc)     | `:lang:` attribute                  |
-| Git Commit Message       | Included in linter&#x2011;spell                                                    | [language&#x2011;git](https://atom.io/packages/language-git)               | None                                |
-| GitHub flavored Markdown | Included in linter&#x2011;spell                                                    | [language&#x2011;gfm](https://atom.io/packages/language-gfm)               | None                                |
-| HTML                     | [linter&#x2011;spell&#x2011;html](https://atom.io/packages/linter-spell-html)             | [language&#x2011;html](https://atom.io/packages/language-html)             | `lang` attribute                    |
-| Javascript               | [linter&#x2011;spell&#x2011;javascript](https://atom.io/packages/linter-spell-javascript) | [language&#x2011;javascript](https://atom.io/packages/language-javascript) | None                                |
-| LaTeX, TeX & BibTeX      | [linter&#x2011;spell&#x2011;latex](https://atom.io/packages/linter-spell-latex)           | [language&#x2011;latex](https://atom.io/packages/language-latex)           | `%!TeX spellcheck` magic comment    |
-| Plain Text               | Included in linter&#x2011;spell                                                    | [language&#x2011;text](https://atom.io/packages/language-text)             | None                                |
+| AsciiDoc                 | Included in linter&#x2011;spell                                                    | [language&#x2011;asciidoc](http://atom.io/packages/language-asciidoc)     | `:lang:` attribute                  |
+| Git Commit Message       | Included in linter&#x2011;spell                                                    | [language&#x2011;git](http://atom.io/packages/language-git)               | None                                |
+| GitHub flavored Markdown | Included in linter&#x2011;spell                                                    | [language&#x2011;gfm](http://atom.io/packages/language-gfm)               | None                                |
+| HTML                     | [linter&#x2011;spell&#x2011;html](http://atom.io/packages/linter-spell-html)             | [language&#x2011;html](http://atom.io/packages/language-html)             | `lang` attribute                    |
+| Javascript               | [linter&#x2011;spell&#x2011;javascript](http://atom.io/packages/linter-spell-javascript) | [language&#x2011;javascript](http://atom.io/packages/language-javascript) | None                                |
+| LaTeX, TeX & BibTeX      | [linter&#x2011;spell&#x2011;latex](http://atom.io/packages/linter-spell-latex)           | [language&#x2011;latex](http://atom.io/packages/language-latex)           | `%!TeX spellcheck` magic comment    |
+| Plain Text               | Included in linter&#x2011;spell                                                    | [language&#x2011;text](http://atom.io/packages/language-text)             | None                                |
 
 ## Creating New Providers
 
@@ -77,10 +79,10 @@ required, but all other properties and methods are optional.
 The `getDictionaries` method should scan `textEditor` for a
 file specific override of the user's default dictionaries and return `[]` if
 no dictionary references were found. See
-[linter&#x2011;spell&#x2011;latex](https://atom.io/packages/linter-spell-latex)
+[linter&#x2011;spell&#x2011;latex](http://atom.io/packages/linter-spell-latex)
 for an implementation using TeX magic comments. [RFC 5646](http://www.rfc-editor.org/rfc/rfc5646.txt)
 language codes may also be returned and `linter-spell` will try to infer which
-dictionary to use. 
+dictionary to use.
 
 The `checkedScopes` list the grammar scopes that either checked or ignored.
 To explicitly check a scope use a value of `true`, while `false` will ignore

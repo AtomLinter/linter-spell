@@ -2,7 +2,7 @@
   "name": "linter-spell",
   "main": "./lib/main",
   "version": "0.6.0",
-  "description": "Linter plugin for Atom using ispell compatible interface such as aspell, hunspell, enchant, etc.",
+  "description": "Multilingual grammar-specific spell checking using Ispell-interface such as Hunspell.",
   "author": "Tarn Burton <twburton@gmail.com>",
   "keywords": [
     "lint",
