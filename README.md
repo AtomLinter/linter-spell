@@ -4,8 +4,7 @@
 
 Multilingual grammar-specific spell checking for [Atom](http://atom.io) and
 [linter](http://atom.io/packages/linter) using Ispell compatible interface such
-as [GNU Aspell](http://aspell.net/), [Hunspell](http://hunspell.github.io/) or
-[Enchant](http://www.abisource.com/projects/enchant/).
+as [GNU Aspell](http://aspell.net/) or [Hunspell](http://hunspell.github.io/).
 
 ## Installing
 
@@ -14,8 +13,8 @@ Use the Atom package manager and search for "linter-spell", or run
 
 ## Prerequisites
 
-This package relies on a `Ispell` compatible package such as [GNU Aspell](http://aspell.net/),
-[Hunspell](http://hunspell.github.io/) or [Enchant](http://www.abisource.com/projects/enchant/).
+This package relies on a `Ispell` compatible package such as
+[GNU Aspell](http://aspell.net/) or [Hunspell](http://hunspell.github.io/).
 
 ## Usage
 
