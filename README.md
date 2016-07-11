@@ -31,15 +31,15 @@ Spell checking plain text, Markdown, or AsciiDoc documents is included in the
 package. To spell check other document types use a `linter-spell-grammar`
 provider:
 
-| Grammar                  | Spell Package                                                               | Grammar Package                                                     | File Specific Dictionary            |
-|--------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------|-------------------------------------|
-| AsciiDoc                 | Included in linter&#x2011;spell                                                    | [language&#x2011;asciidoc](http://atom.io/packages/language-asciidoc)     | `:lang:` attribute                  |
-| Git Commit Message       | Included in linter&#x2011;spell                                                    | [language&#x2011;git](http://atom.io/packages/language-git)               | None                                |
-| GitHub flavored Markdown | Included in linter&#x2011;spell                                                    | [language&#x2011;gfm](http://atom.io/packages/language-gfm)               | None                                |
+| Grammar                  | Spell Package                                                                            | Grammar Package                                                           | File Specific Dictionary            |
+|--------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|-------------------------------------|
+| AsciiDoc                 | Included in linter&#x2011;spell                                                          | [language&#x2011;asciidoc](http://atom.io/packages/language-asciidoc)     | `:lang:` attribute                  |
+| Git Commit Message       | Included in linter&#x2011;spell                                                          | [language&#x2011;git](http://atom.io/packages/language-git)               | None                                |
+| GitHub flavored Markdown | Included in linter&#x2011;spell                                                          | [language&#x2011;gfm](http://atom.io/packages/language-gfm)               | None                                |
 | HTML                     | [linter&#x2011;spell&#x2011;html](http://atom.io/packages/linter-spell-html)             | [language&#x2011;html](http://atom.io/packages/language-html)             | `lang` attribute                    |
 | Javascript               | [linter&#x2011;spell&#x2011;javascript](http://atom.io/packages/linter-spell-javascript) | [language&#x2011;javascript](http://atom.io/packages/language-javascript) | None                                |
 | LaTeX, TeX & BibTeX      | [linter&#x2011;spell&#x2011;latex](http://atom.io/packages/linter-spell-latex)           | [language&#x2011;latex](http://atom.io/packages/language-latex)           | `%!TeX spellcheck` magic comment    |
-| Plain Text               | Included in linter&#x2011;spell                                                    | [language&#x2011;text](http://atom.io/packages/language-text)             | None                                |
+| Plain Text               | Included in linter&#x2011;spell                                                          | [language&#x2011;text](http://atom.io/packages/language-text)             | None                                |
 
 ## Creating New Providers
 
@@ -73,7 +73,7 @@ The provided service should be as follows
       }]
     }
 
-Multiple grammars can be provides by returning an array. `grammarScopes` is
+Multiple grammars can be provided by returning an array. `grammarScopes` is
 required, but all other properties and methods are optional.
 
 The `getDictionaries` method should scan `textEditor` for a
