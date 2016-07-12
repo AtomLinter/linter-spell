@@ -41,9 +41,9 @@
       "default": "hunspell",
       "order": 1
     },
-    "defaultDictionaries": {
-      "title": "Default Dictionaries",
-      "description": "Default dictionaries used to check spelling. If not specified will default to the current locale.",
+    "defaultLanguages": {
+      "title": "Default Languages",
+      "description": "Default languages used to check spelling. If not specified will default to the current locale.",
       "type": "array",
       "default": [],
       "order": 2

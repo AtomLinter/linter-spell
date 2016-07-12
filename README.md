@@ -30,7 +30,7 @@ Spell checking plain text, Markdown, or AsciiDoc documents is included in the
 package. To spell check other document types use a `linter-spell-grammar`
 provider:
 
-| Grammar                  | Spell Package                                                                            | Grammar Package                                                           | File Specific Dictionary            |
+| Grammar                  | Spell Package                                                                            | Grammar Package                                                           | File Specific Language              |
 |--------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|-------------------------------------|
 | AsciiDoc                 | Included in linter&#x2011;spell                                                          | [language&#x2011;asciidoc](http://atom.io/packages/language-asciidoc)     | `:lang:` attribute                  |
 | Git Commit Message       | Included in linter&#x2011;spell                                                          | [language&#x2011;git](http://atom.io/packages/language-git)               | None                                |
@@ -58,7 +58,7 @@ The provided service should be as follows
     provideGrammar () {
       return [{
         grammarScopes: ['source.gfm'],
-        getDictionaries: textEditor => { return ['en_US'] },
+        getLanguages: textEditor => { return ['en-US'] },
         checkedScopes: {
           'source.gfm': true,
           'markup.underline.link.gfm': false
@@ -75,13 +75,12 @@ The provided service should be as follows
 Multiple grammars can be provided by returning an array. `grammarScopes` is
 required, but all other properties and methods are optional.
 
-The `getDictionaries` method should scan `textEditor` for a
-file specific override of the user's default dictionaries and return `[]` if
-no dictionary references were found. See
+The `getLanguages` method should scan `textEditor` for a
+file specific override of the user's default language and return [RFC 5646](http://www.rfc-editor.org/rfc/rfc5646.txt)
+compliant language codes or `[]` if
+no language references were found. See
 [linter&#x2011;spell&#x2011;latex](http://atom.io/packages/linter-spell-latex)
-for an implementation using TeX magic comments. [RFC 5646](http://www.rfc-editor.org/rfc/rfc5646.txt)
-language codes may also be returned and `linter-spell` will try to infer which
-dictionary to use.
+for an implementation using TeX magic comments.
 
 The `checkedScopes` list the grammar scopes that either checked or ignored.
 To explicitly check a scope use a value of `true`, while `false` will ignore
