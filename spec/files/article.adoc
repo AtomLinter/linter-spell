@@ -1,8 +1,8 @@
 The Article Title
 =================
 :lang: en
-Author's Name <authors@email.address>
 v1.0, 2003-12
+Author's Name <authors@email.address>
 
 
 This is the optional preamble (an untitled section body). Useful for
