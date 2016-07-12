@@ -58,12 +58,12 @@ The provided service should be as follows
     provideGrammar () {
       return [{
         grammarScopes: ['source.gfm'],
-        getLanguages: textEditor => { return ['en-US'] },
+        findLanguageTags: textEditor => { return ['en-US'] },
         checkedScopes: {
           'source.gfm': true,
           'markup.underline.link.gfm': false
         },
-        getRanges: (textEditor, ranges) => {
+        filterRanges: (textEditor, ranges) => {
           return {
             ranges: ranges,
             ignoredRanges: []
@@ -75,7 +75,7 @@ The provided service should be as follows
 Multiple grammars can be provided by returning an array. `grammarScopes` is
 required, but all other properties and methods are optional.
 
-The `getLanguages` method should scan `textEditor` for a
+The `findLanguageTags` method should scan `textEditor` for a
 file specific override of the user's default language and return [RFC 5646](http://www.rfc-editor.org/rfc/rfc5646.txt)
 compliant language codes or `[]` if
 no language references were found. See
@@ -88,7 +88,7 @@ that scope. If this property is not provided then all scopes in `grammarScopes`
 will be checked. When it is provided all scopes default to ignored unless
 specified with a `true` value.
 
-The `getRanges` method should check the `ranges` parameter for sub-ranges
+The `filterRanges` method should check the `ranges` parameter for sub-ranges
 within each ranges which are valid to spell check. It should return a list
 of modified ranges in `ranges` and can also return `ignoredRanges` for
 ranges that should not be checked. The interval difference between `ranges`
