@@ -41,7 +41,8 @@ provider:
 | GitHub flavored Markdown | Included in linter&#x2011;spell                                                          | [language&#x2011;gfm](http://atom.io/packages/language-gfm)               | None                                |
 | HTML                     | [linter&#x2011;spell&#x2011;html](http://atom.io/packages/linter-spell-html)             | [language&#x2011;html](http://atom.io/packages/language-html)             | `lang` attribute                    |
 | Javascript               | [linter&#x2011;spell&#x2011;javascript](http://atom.io/packages/linter-spell-javascript) | [language&#x2011;javascript](http://atom.io/packages/language-javascript) | None                                |
-| LaTeX, TeX & BibTeX      | [linter&#x2011;spell&#x2011;latex](http://atom.io/packages/linter-spell-latex)           | [language&#x2011;latex](http://atom.io/packages/language-latex)           | `%!TeX spellcheck` magic comment    |
+| LaTeX, TeX &amp; BibTeX  | [linter&#x2011;spell&#x2011;latex](http://atom.io/packages/linter-spell-latex)           | [language&#x2011;latex](http://atom.io/packages/language-latex)           | `%!TeX spellcheck` magic comment    |
+| Markdown                 | Included in linter&#x2011;spell                                                          | [language&#x2011;markdown](http://atom.io/packages/language-markdown)     | None                                |
 | Plain Text               | Included in linter&#x2011;spell                                                          | [language&#x2011;text](http://atom.io/packages/language-text)             | None                                |
 
 ## Creating New Providers
