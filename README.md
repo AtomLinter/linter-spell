@@ -24,6 +24,10 @@ corrected or added to personal dictionary using the
 [intentions](http://atom.io/packages/intentions) package via
 `ctrl` + `enter` on OSX and `alt` + `enter` on Linux and Windows.
 
+Manual language selection can be done by clicking on the status bar language
+indicator or by using the default keybinding `alt`-`y` on Linux or
+`ctrl`-`shift`-`y` on other platforms.
+
 ## Providers
 
 Spell checking plain text, Markdown, or AsciiDoc documents is included in the

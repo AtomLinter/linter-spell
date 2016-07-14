@@ -1,7 +1,15 @@
 # Change Log
 
-## [0.7.0](https://github.com/yitzchak/linter-spell/tree/0.7.0) (2016-07-10)
-[Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.6.0...0.7.0)
+## [0.8.0](https://github.com/yitzchak/linter-spell/tree/0.8.0) (2016-07-13)
+[Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.7.0...0.8.0)
+
+**Implemented enhancements:**
+
+- User selection of language [\#16](https://github.com/yitzchak/linter-spell/issues/16)
+- Better Language Matching  [\#15](https://github.com/yitzchak/linter-spell/issues/15)
+
+## [v0.7.0](https://github.com/yitzchak/linter-spell/tree/v0.7.0) (2016-07-10)
+[Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.6.0...v0.7.0)
 
 **Implemented enhancements:**
 
