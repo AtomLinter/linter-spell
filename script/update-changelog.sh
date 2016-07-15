@@ -1,3 +1,4 @@
 #!/bin/sh
 
-~/.gem/ruby/2.3.0/bin/github_changelog_generator --future-release $1
+PACKAGE_VERSION=$(node -p "require('semver').inc(require('./package.json').version, '$1')")
+github_changelog_generator --future-release $PACKAGE_VERSION
