@@ -8,12 +8,15 @@ as [GNU Aspell](http://aspell.net/) or [Hunspell](http://hunspell.github.io/).
 
 ## Installing
 
-Use the Atom package manager and search for "linter-spell", or run
-`apm install linter-spell` from the command line.
+Use the Atom package manager and search for "linter-spell", or from a shell run
+
+```bash
+apm install linter-spell
+```
 
 ## Prerequisites
 
-This package relies on a `Ispell` compatible package such as
+This package relies on a Ispell compatible package such as
 [GNU Aspell](http://aspell.net/) or [Hunspell](http://hunspell.github.io/).
 
 ## Usage
@@ -50,32 +53,36 @@ provider:
 New grammars can be added by implementing a `linter-spell-grammar` provider.
 This can be done by adding the following to `package.json`
 
-    "providedServices": {
-      "linter-spell-grammar": {
-        "versions": {
-          "1.0.0": "provideGrammar"
-        }
-      }
+```javascript
+"providedServices": {
+  "linter-spell-grammar": {
+    "versions": {
+      "1.0.0": "provideGrammar"
     }
+  }
+}
+```
 
 The provided service should be as follows
 
-    provideGrammar () {
-      return [{
-        grammarScopes: ['source.gfm'],
-        findLanguageTags: textEditor => { return ['en-US'] },
-        checkedScopes: {
-          'source.gfm': true,
-          'markup.underline.link.gfm': false
-        },
-        filterRanges: (textEditor, ranges) => {
-          return {
-            ranges: ranges,
-            ignoredRanges: []
-          }
-        }
-      }]
+```javascript
+provideGrammar () {
+  return [{
+    grammarScopes: ['source.gfm'],
+    findLanguageTags: textEditor => { return ['en-US'] },
+    checkedScopes: {
+      'source.gfm': true,
+      'markup.underline.link.gfm': false
+    },
+    filterRanges: (textEditor, ranges) => {
+      return {
+        ranges: ranges,
+        ignoredRanges: []
+      }
     }
+  }]
+}
+```
 
 Multiple grammars can be provided by returning an array. `grammarScopes` is
 required, but all other properties and methods are optional.
