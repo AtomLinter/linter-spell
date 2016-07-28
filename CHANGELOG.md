@@ -1,7 +1,7 @@
 # Change Log
 
-## [0.9.0](https://github.com/yitzchak/linter-spell/tree/0.9.0) (2016-07-28)
-[Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.8.0...0.9.0)
+## [v0.9.0](https://github.com/yitzchak/linter-spell/tree/v0.9.0) (2016-07-28)
+[Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.8.0...v0.9.0)
 
 **Implemented enhancements:**
 
