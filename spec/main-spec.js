@@ -4,7 +4,7 @@ import * as _ from 'lodash'
 import * as path from 'path'
 
 describe('The hunspell provider for Atom Linter', () => {
-  const lint = require('../lib/main').provideLinter().lint
+  const lint = require('../lib/providers').provideLinter().lint
 
   beforeEach(() => {
     waitsForPromise(() => {
