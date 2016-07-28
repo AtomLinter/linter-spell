@@ -1,7 +1,15 @@
 # Change Log
 
-## [0.8.0](https://github.com/yitzchak/linter-spell/tree/0.8.0) (2016-07-14)
-[Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.7.0...0.8.0)
+## [0.9.0](https://github.com/yitzchak/linter-spell/tree/0.9.0) (2016-07-28)
+[Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.8.0...0.9.0)
+
+**Implemented enhancements:**
+
+- Improve checked scopes [\#20](https://github.com/yitzchak/linter-spell/issues/20)
+- Support embedded spell checking [\#19](https://github.com/yitzchak/linter-spell/issues/19)
+
+## [v0.8.0](https://github.com/yitzchak/linter-spell/tree/v0.8.0) (2016-07-14)
+[Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.7.0...v0.8.0)
 
 **Implemented enhancements:**
 
