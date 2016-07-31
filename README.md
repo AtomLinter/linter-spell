@@ -25,11 +25,11 @@ Spell checking is done upon document save with misspellings displayed by
 [linter](http://atom.io/packages/linter). Misspellings can be
 corrected or added to personal dictionary using the
 [intentions](http://atom.io/packages/intentions) package via
-`ctrl` + `enter` on OSX and `alt` + `enter` on Linux and Windows.
+<kbd>ctrl</kbd>+<kbd>enter</kbd> on OSX and <kbd>alt</kbd>+<kbd>enter</kbd> on Linux and Windows.
 
 Manual language selection can be done by clicking on the status bar language
-indicator or by using the default keybinding `alt`-`y` on Linux or
-`ctrl`-`shift`-`y` on other platforms.
+indicator or by using the default keybinding <kbd>alt</kbd>+<kbd>y</kbd> on Linux or
+<kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>y</kbd> on other platforms.
 
 ## Providers
 
