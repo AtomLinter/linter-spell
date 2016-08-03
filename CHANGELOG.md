@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.10.0](https://github.com/yitzchak/linter-spell/tree/0.10.0) (2016-08-03)
+[Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.9.2...0.10.0)
+
+**Implemented enhancements:**
+
+- Allow dynamic change in checked scopes [\#21](https://github.com/yitzchak/linter-spell/issues/21)
+
 ## [v0.9.2](https://github.com/yitzchak/linter-spell/tree/v0.9.2) (2016-08-02)
 [Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.9.1...v0.9.2)
 
