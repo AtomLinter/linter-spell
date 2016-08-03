@@ -73,7 +73,8 @@ provideGrammar () {
     findLanguageTags: textEditor => { return ['en-US'] },
     checkedScopes: {
       'source.gfm': true,
-      'markup.underline.link.gfm': false
+      'markup.code.c.gfm': false,
+      'markup.underline.link.gfm': () => atom.config.get('linter-spell.checkLinks')
     },
     filterRanges: (textEditor, ranges) => {
       return {
@@ -88,18 +89,20 @@ provideGrammar () {
 Multiple grammars can be provided by returning an array. `grammarScopes` is
 required, but all other properties and methods are optional.
 
-The `findLanguageTags` method should scan `textEditor` for a
-file specific override of the user's default language and return [RFC 5646](http://www.rfc-editor.org/rfc/rfc5646.txt)
-compliant language codes or `[]` if
-no language references were found. See
+The `findLanguageTags` method should scan `textEditor` for a file specific
+override of the user's default language and return [RFC
+5646](http://www.rfc-editor.org/rfc/rfc5646.txt) compliant language codes or `[]`
+if no language references were found. See
 [linter&#x2011;spell&#x2011;latex](http://atom.io/packages/linter-spell-latex)
 for an implementation using TeX magic comments.
 
-The `checkedScopes` list the grammar scopes that either checked or ignored.
-To explicitly check a scope use a value of `true`, while `false` will ignore
-that scope. If this property is not provided then all scopes in `grammarScopes`
-will be checked. When it is provided all scopes default to ignored unless
-specified with a `true` value.
+The `checkedScopes` list the grammar scopes that either checked or ignored. To
+explicitly check a scope use a value of `true`, while `false` will ignore that
+scope. To allow dynamic determination of scope spell checking a function may
+also be supplied. The function should take no arguments and return a truthy
+value. If this property is not provided then all scopes in `grammarScopes` will
+be checked. When it is provided all scopes default to ignored unless specified
+with a `true` value.
 
 The `filterRanges` method should check the `ranges` parameter for sub-ranges
 within each ranges which are valid to spell check. It should return a list
