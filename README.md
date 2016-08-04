@@ -48,6 +48,7 @@ provider:
 | LaTeX                    | [linter&#x2011;spell&#x2011;latexsimple](https://atom.io/packages/linter-spell-latexsimple) | [language&#x2011;latexsimple](https://atom.io/packages/language-latexsimple)                                                                 | None                                |
 | Markdown                 | Included in linter&#x2011;spell                                                             | [language&#x2011;markdown](http://atom.io/packages/language-markdown)                                                                        | None                                |
 | Plain Text               | Included in linter&#x2011;spell                                                             | [language&#x2011;text](http://atom.io/packages/language-text)                                                                                | None                                |
+| Ruby                     | [linter&#x2011;spell&#x2011;ruby](http://atom.io/packages/linter-spell-ruby)                | [language&#x2011;ruby](http://atom.io/packages/language-ruby)                                                                                | None                                |
 
 ## Creating New Providers
 
