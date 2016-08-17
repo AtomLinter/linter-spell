@@ -56,6 +56,13 @@
       "type": "string",
       "default": "",
       "order": 3
+    },
+    "checkForSpellCheck": {
+      "title": "Check for spell-check package",
+      "description": "Check for an active spell-check package and warn user about incompatibility.",
+      "type": "boolean",
+      "default": true,
+      "order": 4
     }
   },
   "standard": {
