@@ -50,7 +50,7 @@ provider:
 | Plain Text               | Included in linter&#x2011;spell                                                             | [language&#x2011;text](http://atom.io/packages/language-text)                                                                                | None                                |
 | Ruby                     | [linter&#x2011;spell&#x2011;ruby](http://atom.io/packages/linter-spell-ruby)                | [language&#x2011;ruby](http://atom.io/packages/language-ruby)                                                                                | None                                |
 
-## Creating New Providers
+## Creating New Grammar Providers
 
 New grammars can be added by implementing a `linter-spell-grammar` provider.
 This can be done by adding the following to `package.json`
@@ -68,7 +68,7 @@ This can be done by adding the following to `package.json`
 The provided service should be as follows
 
 ```javascript
-provideGrammar () {
+function provideGrammar () {
   return [{
     grammarScopes: ['source.gfm'],
     findLanguageTags: textEditor => { return ['en-US'] },
@@ -110,6 +110,38 @@ within each ranges which are valid to spell check. It should return a list
 of modified ranges in `ranges` and can also return `ignoredRanges` for
 ranges that should not be checked. The interval difference between `ranges`
 and `ignoredRanges` will actually be checked.
+
+## Create New Dictionary Providers
+
+New dictionaries can be added by implementing a `linter-spell-dictionary` provider.
+This can be done by adding the following to `package.json`
+
+```json
+"providedServices": {
+  "linter-spell-dictionary": {
+    "versions": {
+      "1.0.0": "provideDictionary"
+    }
+  }
+}
+```
+
+The provided service should be as follows
+
+```javascript
+function provideDictionary () {
+  return [{
+    name: 'Your dictionary name',
+    grammarScopes: ['source.gfm'],
+    languages: ['en-US'],
+    checkWord: (word) => { return false }, // return true if it is a word
+    addWord: (word) => { /* add word to your dictionary */ }
+  }]
+}
+```
+
+Multiple grammars can be provided by returning an array. `name` and `checkWord` are
+required, but all other properties and methods are optional.
 
 ## Status
 
