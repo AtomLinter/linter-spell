@@ -134,8 +134,8 @@ function provideDictionary () {
     name: 'Your dictionary name',
     grammarScopes: ['source.gfm'],
     languages: ['en-US'],
-    checkWord: (word) => { return false }, // return true if it is a word
-    addWord: (word) => { /* add word to your dictionary */ }
+    checkWord: (textEditor, languages, range) => { return false }, // return true if it is a word
+    addWord: (textEditor, languages, range) => { /* add word to your dictionary */ }
   }]
 }
 ```
