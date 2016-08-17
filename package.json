@@ -82,6 +82,11 @@
         "1.0.0": "consumeGrammar"
       }
     },
+    "linter-spell-dictionary": {
+      "versions": {
+        "1.0.0": "consumeDictionary"
+      }
+    },
     "linter-plus-self": {
       "versions": {
         "0.1.0": "consumeLinter"
