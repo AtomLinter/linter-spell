@@ -135,14 +135,14 @@ function provideDictionary () {
     grammarScopes: ['source.gfm'],
     languages: ['en-US'],
     checkWord: (textEditor, languages, range) => {
-      return {
+      return new Promise((resolve, reject) => resolve({
         isWord: false, // return true if word is found
         suggestions: ['bar'],
         actions: [{
           title: "Add to Markdown dictionary",
           apply: () => { /* add word to your dictionary. Return true if warning should be removed. */ }
         }]
-      }
+      })
     }
   }]
 }
