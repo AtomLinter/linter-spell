@@ -134,14 +134,15 @@ function provideDictionary () {
     name: 'Your dictionary name',
     grammarScopes: ['source.gfm'],
     languages: ['en-US'],
-    checkRange: (textEditor, languages, range) => {
-      return [{
-        text: 'foo',
-        range: new Range([0, 1], [0, 10]),
+    checkWord: (textEditor, languages, range) => {
+      return {
+        isWord: false, // return true if word is found
         suggestions: ['bar'],
-        add: respectCase => { /* add the word to your dictionary */ },
-        ignore: respectCase => { /* ignore the word for the rest of the session */ }
-      }]
+        actions: [{
+          title: "Add to Markdown dictionary",
+          apply: () => { /* add word to your dictionary. Return true if warning should be removed. */ }
+        }]
+      }
     }
   }]
 }
