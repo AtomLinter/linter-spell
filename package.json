@@ -111,6 +111,11 @@
         "1.0.0": "provideGrammar"
       }
     },
+    "linter-spell-dictionary": {
+      "versions": {
+        "1.0.0": "provideDictionary"
+      }
+    },
     "intentions:list": {
       "versions": {
         "1.0.0": "provideIntentions"
