@@ -134,6 +134,16 @@ function provideDictionary () {
     name: 'Your dictionary name',
     grammarScopes: ['source.gfm'],
     languages: ['en-US'],
+    checkRange: (textEditor, languages, range) => {
+      return new Promise((resolve, reject) => resolve([{
+        range: new Range([0, 1], [0, 4]),
+        suggestions: ['bar'],
+        actions: [{
+          title: "Add to Markdown dictionary",
+          apply: () => { /* add word to your dictionary. Return true if warning should be removed. */ }
+        }]
+      }])
+    },
     checkWord: (textEditor, languages, range) => {
       return new Promise((resolve, reject) => resolve({
         isWord: false, // return true if word is found
