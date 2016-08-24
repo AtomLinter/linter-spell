@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.11.1](https://github.com/yitzchak/linter-spell/tree/v0.11.1) (2016-08-20)
+[Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.11.0...v0.11.1)
+
+**Fixed bugs:**
+
+- updateDictionaries\(\) in language-manager.js fail  in hunspell case with non english interface [\#25](https://github.com/yitzchak/linter-spell/issues/25)
+
 ## [v0.11.0](https://github.com/yitzchak/linter-spell/tree/v0.11.0) (2016-08-17)
 [Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.10.3...v0.11.0)
 
