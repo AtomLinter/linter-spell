@@ -31,7 +31,7 @@ Manual language selection can be done by clicking on the status bar language
 indicator or by using the default keybinding <kbd>alt</kbd>+<kbd>y</kbd> on Linux or
 <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>y</kbd> on other platforms.
 
-## Providers
+## Grammar Providers
 
 Spell checking plain text, Markdown, or AsciiDoc documents is included in the
 package. To spell check other document types use a `linter-spell-grammar`
@@ -44,11 +44,23 @@ provider:
 | GitHub flavored Markdown | Included in linter&#x2011;spell                                                             | [language&#x2011;gfm](http://atom.io/packages/language-gfm)                                                                                  | None                                |
 | HTML                     | [linter&#x2011;spell&#x2011;html](http://atom.io/packages/linter-spell-html)                | [language&#x2011;html](http://atom.io/packages/language-html)                                                                                | `lang` attribute                    |
 | Javascript               | [linter&#x2011;spell&#x2011;javascript](http://atom.io/packages/linter-spell-javascript)    | [language&#x2011;javascript](http://atom.io/packages/language-javascript) or [language&#x2011;babel](http://atom.io/packages/language-babel) | None                                |
+| JSON                     | [linter&#x2011;spell&#x2011;javascript](http://atom.io/packages/linter-spell-javascript)    | [language&#x2011;json](http://atom.io/packages/language-json)                                                                                | None                                |
 | LaTeX, TeX &amp; BibTeX  | [linter&#x2011;spell&#x2011;latex](http://atom.io/packages/linter-spell-latex)              | [language&#x2011;tex](http://atom.io/packages/language-tex) (preferred) or [language&#x2011;latex](http://atom.io/packages/language-latex)   | `%!TeX spellcheck` magic comment    |
 | LaTeX                    | [linter&#x2011;spell&#x2011;latexsimple](https://atom.io/packages/linter-spell-latexsimple) | [language&#x2011;latexsimple](https://atom.io/packages/language-latexsimple)                                                                 | None                                |
 | Markdown                 | Included in linter&#x2011;spell                                                             | [language&#x2011;markdown](http://atom.io/packages/language-markdown)                                                                        | None                                |
 | Plain Text               | Included in linter&#x2011;spell                                                             | [language&#x2011;text](http://atom.io/packages/language-text)                                                                                | None                                |
 | Ruby                     | [linter&#x2011;spell&#x2011;ruby](http://atom.io/packages/linter-spell-ruby)                | [language&#x2011;ruby](http://atom.io/packages/language-ruby)                                                                                | None                                |
+
+## Dictionary providers
+
+linter-spell can use multiple dictionary providers. A dictionary provider can
+check for misspellings and may allow the user to add their dictionaries. The
+current dictionary providers are listed below.
+
+| Grammar | Languages | Dictionary Package                                                                 | Purpose                                            |
+|---------|-----------|------------------------------------------------------------------------------------|----------------------------------------------------|
+| All     | All       | Included in linter&#x2011;spell                                                    | Ispell compatible spell checking and word breaking |
+| All     | All       | [linter&#x2011;spell&#x2011;project](http://atom.io/packages/linter-spell-project) | Project specific dictionaries                      |
 
 ## Creating New Grammar Providers
 
@@ -113,8 +125,8 @@ and `ignoredRanges` will actually be checked.
 
 ## Create New Dictionary Providers
 
-New dictionaries can be added by implementing a `linter-spell-dictionary` provider.
-This can be done by adding the following to `package.json`
+New dictionaries can be added by implementing a `linter-spell-dictionary`
+provider. This can be done by adding the following to `package.json`
 
 ```json
 "providedServices": {
@@ -140,7 +152,7 @@ function provideDictionary () {
         suggestions: ['bar'],
         actions: [{
           title: "Add to Markdown dictionary",
-          apply: () => { /* add word to your dictionary. Return true if warning should be removed. */ }
+          apply: () => { /* add word to your dictionary. */ }
         }]
       }])
     },
@@ -150,7 +162,7 @@ function provideDictionary () {
         suggestions: ['bar'],
         actions: [{
           title: "Add to Markdown dictionary",
-          apply: () => { /* add word to your dictionary. Return true if warning should be removed. */ }
+          apply: () => { /* add word to your dictionary. */ }
         }]
       })
     }
@@ -158,9 +170,20 @@ function provideDictionary () {
 }
 ```
 
-Multiple grammars can be provided by returning an array. `name` and `checkWord` are
-required, but all other properties and methods are optional.
+Multiple grammars can be provided by returning an array. `name` and `checkWord`
+are required, but all other properties and methods are optional. If
+`grammarScopes` or `languages` are not provided then provider will be used for
+all grammar scopes or languages, respectively.
 
-## Status
+If `checkRange` is provided then it is assumed that the dictionary knows how
+find line breaks for all of the languages listed in `languages`. `linter-spell`
+will then move that provider to the front of the queue and allow it to perform
+word and breaks and return words that are potentially misspelled. Those
+potential misspellings are then passed to the dictionary providers that only
+define `checkWord` for an opportunity to check the word against their
+dictionary.
 
-Please note that this package is in a **beta** state.
+If a provider cannot find a word in its dictionary then it should at least
+return `{ isWord: false }`. It may also return a list of `suggestions` or a list
+of `actions` to take on the misspelled word. For example, adding the word to a
+language specific dictionary.
