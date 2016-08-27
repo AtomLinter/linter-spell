@@ -13,7 +13,7 @@ describe('The Ispell provider for Atom Linter', () => {
 
 beforeEach(() => {
   waitsForPromise(() => {
-    return Promise.all(['linter-spell', 'intentions', 'linter'].map(p => atom.packages.activatePackage(p)))
+    return Promise.all(['linter-spell'].map(p => atom.packages.activatePackage(p)))
   })
 })
 
