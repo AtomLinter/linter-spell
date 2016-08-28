@@ -77,7 +77,7 @@
       "order": 6
     },
     "asciiDocWords": {
-      "title": "AsciiDoc Words"
+      "title": "AsciiDoc Words",
       "description": "AsciiDoc specific word list. Precede word with '!' to make word case sensitive.",
       "type": "array",
       "default": [],
