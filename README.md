@@ -151,7 +151,7 @@ function provideDictionary () {
         range: new Range([0, 1], [0, 4]),
         suggestions: ['bar'],
         actions: [{
-          title: "Add to Markdown dictionary",
+          title: "Add to my dictionary",
           apply: () => { /* add word to your dictionary. */ }
         }]
       }])
@@ -159,9 +159,9 @@ function provideDictionary () {
     checkWord: (textEditor, languages, range) => {
       return new Promise((resolve, reject) => resolve({
         isWord: false, // return true if word is found
-        suggestions: ['bar'],
+        suggestions: ['foo'],
         actions: [{
-          title: "Add to Markdown dictionary",
+          title: "Add to my dictionary",
           apply: () => { /* add word to your dictionary. */ }
         }]
       })
