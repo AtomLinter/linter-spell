@@ -22,14 +22,15 @@ This package relies on a Ispell compatible package such as
 ## Usage
 
 Spell checking is done upon document save with misspellings displayed by
-[linter](http://atom.io/packages/linter). Misspellings can be
-corrected or added to personal dictionary using the
+[linter](http://atom.io/packages/linter). Misspellings can be corrected or added
+to personal dictionary using the
 [intentions](http://atom.io/packages/intentions) package via
-<kbd>ctrl</kbd>+<kbd>enter</kbd> on OSX and <kbd>alt</kbd>+<kbd>enter</kbd> on Linux and Windows.
+<kbd>ctrl</kbd>+<kbd>enter</kbd> on OSX and <kbd>alt</kbd>+<kbd>enter</kbd> on
+Linux and Windows.
 
 Manual language selection can be done by clicking on the status bar language
-indicator or by using the default keybinding <kbd>alt</kbd>+<kbd>y</kbd> on Linux or
-<kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>y</kbd> on other platforms.
+indicator or by using the default keybinding <kbd>alt</kbd>+<kbd>y</kbd> on
+Linux or <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>y</kbd> on other platforms.
 
 ## Grammar Providers
 
@@ -54,8 +55,8 @@ provider:
 ## Dictionary providers
 
 linter-spell can use multiple dictionary providers. A dictionary provider can
-check for misspellings and may allow the user to add their dictionaries. The
-current dictionary providers are listed below.
+check for misspellings and may allow the user to add words to the provider's
+dictionary. The current dictionary providers are listed below.
 
 | Grammar | Languages | Dictionary Package                                                                 | Purpose                                            |
 |---------|-----------|------------------------------------------------------------------------------------|----------------------------------------------------|
@@ -151,7 +152,7 @@ function provideDictionary () {
         range: new Range([0, 1], [0, 4]),
         suggestions: ['bar'],
         actions: [{
-          title: "Add to my dictionary",
+          title: 'Add to my dictionary',
           apply: () => { /* add word to your dictionary. */ }
         }]
       }])
@@ -161,7 +162,7 @@ function provideDictionary () {
         isWord: false, // return true if word is found
         suggestions: ['foo'],
         actions: [{
-          title: "Add to my dictionary",
+          title: 'Add to my dictionary',
           apply: () => { /* add word to your dictionary. */ }
         }]
       })
