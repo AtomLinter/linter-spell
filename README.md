@@ -58,10 +58,14 @@ linter-spell can use multiple dictionary providers. A dictionary provider can
 check for misspellings and may allow the user to add words to the provider's
 dictionary. The current dictionary providers are listed below.
 
-| Grammar | Languages | Dictionary Package                                                                 | Purpose                                            |
-|---------|-----------|------------------------------------------------------------------------------------|----------------------------------------------------|
-| All     | All       | Included in linter&#x2011;spell                                                    | Ispell compatible spell checking and word breaking |
-| All     | All       | [linter&#x2011;spell&#x2011;project](http://atom.io/packages/linter-spell-project) | Project specific dictionaries                      |
+| Grammar            | Languages | Dictionary Package                                                                 | Purpose                                            |
+|--------------------|-----------|------------------------------------------------------------------------------------|----------------------------------------------------|
+| All                | All       | Included in linter&#x2011;spell                                                    | Ispell compatible spell checking and word breaking |
+| All                | All       | [linter&#x2011;spell&#x2011;project](http://atom.io/packages/linter-spell-project) | Project specific dictionaries                      |
+| AsciiDoc           | All       | Included in linter&#x2011;spell                                                    | Language specific dictionary                       |
+| Git Commit Message | All       | Included in linter&#x2011;spell                                                    | Language specific dictionary                       |
+| Markdown           | All       | Included in linter&#x2011;spell                                                    | Language specific dictionary                       |
+| Plain Text         | All       | Included in linter&#x2011;spell                                                    | Language specific dictionary                       |
 
 ## Creating New Grammar Providers
 
