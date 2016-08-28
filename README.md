@@ -22,16 +22,17 @@ This package relies on a Ispell compatible package such as
 ## Usage
 
 Spell checking is done upon document save with misspellings displayed by
-[linter](http://atom.io/packages/linter). Misspellings can be
-corrected or added to personal dictionary using the
+[linter](http://atom.io/packages/linter). Misspellings can be corrected or added
+to personal dictionary using the
 [intentions](http://atom.io/packages/intentions) package via
-<kbd>ctrl</kbd>+<kbd>enter</kbd> on OSX and <kbd>alt</kbd>+<kbd>enter</kbd> on Linux and Windows.
+<kbd>ctrl</kbd>+<kbd>enter</kbd> on OSX and <kbd>alt</kbd>+<kbd>enter</kbd> on
+Linux and Windows.
 
 Manual language selection can be done by clicking on the status bar language
-indicator or by using the default keybinding <kbd>alt</kbd>+<kbd>y</kbd> on Linux or
-<kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>y</kbd> on other platforms.
+indicator or by using the default keybinding <kbd>alt</kbd>+<kbd>y</kbd> on
+Linux or <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>y</kbd> on other platforms.
 
-## Providers
+## Grammar Providers
 
 Spell checking plain text, Markdown, or AsciiDoc documents is included in the
 package. To spell check other document types use a `linter-spell-grammar`
@@ -51,7 +52,22 @@ provider:
 | Plain Text               | Included in linter&#x2011;spell                                                             | [language&#x2011;text](http://atom.io/packages/language-text)                                                                                | None                                |
 | Ruby                     | [linter&#x2011;spell&#x2011;ruby](http://atom.io/packages/linter-spell-ruby)                | [language&#x2011;ruby](http://atom.io/packages/language-ruby)                                                                                | None                                |
 
-## Creating New Providers
+## Dictionary providers
+
+linter-spell can use multiple dictionary providers. A dictionary provider can
+check for misspellings and may allow the user to add words to the provider's
+dictionary. The current dictionary providers are listed below.
+
+| Grammar            | Languages | Dictionary Package                                                                 | Purpose                                            |
+|--------------------|-----------|------------------------------------------------------------------------------------|----------------------------------------------------|
+| All                | All       | Included in linter&#x2011;spell                                                    | Ispell compatible spell checking and word breaking |
+| All                | All       | [linter&#x2011;spell&#x2011;project](http://atom.io/packages/linter-spell-project) | Project specific dictionaries                      |
+| AsciiDoc           | All       | Included in linter&#x2011;spell                                                    | Language specific dictionary                       |
+| Git Commit Message | All       | Included in linter&#x2011;spell                                                    | Language specific dictionary                       |
+| Markdown           | All       | Included in linter&#x2011;spell                                                    | Language specific dictionary                       |
+| Plain Text         | All       | Included in linter&#x2011;spell                                                    | Language specific dictionary                       |
+
+## Creating New Grammar Providers
 
 New grammars can be added by implementing a `linter-spell-grammar` provider.
 This can be done by adding the following to `package.json`
@@ -69,7 +85,7 @@ This can be done by adding the following to `package.json`
 The provided service should be as follows
 
 ```javascript
-provideGrammar () {
+function provideGrammar () {
   return [{
     grammarScopes: ['source.gfm'],
     findLanguageTags: textEditor => { return ['en-US'] },
@@ -112,6 +128,67 @@ of modified ranges in `ranges` and can also return `ignoredRanges` for
 ranges that should not be checked. The interval difference between `ranges`
 and `ignoredRanges` will actually be checked.
 
-## Status
+## Create New Dictionary Providers
 
-Please note that this package is in a **beta** state.
+New dictionaries can be added by implementing a `linter-spell-dictionary`
+provider. This can be done by adding the following to `package.json`
+
+```json
+"providedServices": {
+  "linter-spell-dictionary": {
+    "versions": {
+      "1.0.0": "provideDictionary"
+    }
+  }
+}
+```
+
+The provided service should be as follows
+
+```javascript
+function provideDictionary () {
+  return [{
+    name: 'Your dictionary name',
+    grammarScopes: ['source.gfm'],
+    languages: ['en-US'],
+    checkRange: (textEditor, languages, range) => {
+      return new Promise((resolve, reject) => resolve([{
+        range: new Range([0, 1], [0, 4]),
+        suggestions: ['bar'],
+        actions: [{
+          title: 'Add to my dictionary',
+          apply: () => { /* add word to your dictionary. */ }
+        }]
+      }])
+    },
+    checkWord: (textEditor, languages, range) => {
+      return new Promise((resolve, reject) => resolve({
+        isWord: false, // return true if word is found
+        suggestions: ['foo'],
+        actions: [{
+          title: 'Add to my dictionary',
+          apply: () => { /* add word to your dictionary. */ }
+        }]
+      })
+    }
+  }]
+}
+```
+
+Multiple grammars can be provided by returning an array. `name` and `checkWord`
+are required, but all other properties and methods are optional. If
+`grammarScopes` or `languages` are not provided then provider will be used for
+all grammar scopes or languages, respectively.
+
+If `checkRange` is provided then it is assumed that the dictionary knows how
+find line breaks for all of the languages listed in `languages`. `linter-spell`
+will then move that provider to the front of the queue and allow it to perform
+word and breaks and return words that are potentially misspelled. Those
+potential misspellings are then passed to the dictionary providers that only
+define `checkWord` for an opportunity to check the word against their
+dictionary.
+
+If a provider cannot find a word in its dictionary then it should at least
+return `{ isWord: false }`. It may also return a list of `suggestions` or a list
+of `actions` to take on the misspelled word. For example, adding the word to a
+language specific dictionary.

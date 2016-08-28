@@ -3,7 +3,7 @@
 import * as _ from 'lodash'
 import * as path from 'path'
 
-describe('The hunspell provider for Atom Linter', () => {
+describe('The Ispell provider for Atom Linter', () => {
   const lint = require('../lib/providers').provideLinter().lint
 
   beforeEach(() => {
@@ -17,7 +17,6 @@ describe('The hunspell provider for Atom Linter', () => {
       return atom.workspace.open(path.join(__dirname, 'files', 'foo.txt')).then(editor => {
         return lint(editor).then(messages => {
           expect(_.some(messages, (message) => { return message.text.match(/^armour( ->|$)/) })).toBe(true)
-          // expect(_.some(messages, (message) => { return message.text.match(/^travelling(:|$)/) })).toBe(true)
         })
       })
     })

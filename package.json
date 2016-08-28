@@ -23,8 +23,8 @@
     "lodash": "^4.13.0",
     "atom-package-deps": "^4.0.0",
     "language-tags": "^1.0.0",
-    "atom-linter": "^7.0.0",
-    "atom-space-pen-views": "^2.2.0"
+    "atom-space-pen-views": "^2.2.0",
+    "linter-spell-word-list": "^0.3.1"
   },
   "devDependencies": {
     "xml2js": "^0.4.0",
@@ -63,6 +63,31 @@
       "type": "boolean",
       "default": true,
       "order": 4
+    },
+    "plainTextWords": {
+      "description": "Plain text specific word list. Precede word with '!' to make word case sensitive.",
+      "type": "array",
+      "default": [],
+      "order": 5
+    },
+    "gitCommitWords": {
+      "description": "GIT commit specific word list. Precede word with '!' to make word case sensitive.",
+      "type": "array",
+      "default": [],
+      "order": 6
+    },
+    "asciiDocWords": {
+      "title": "AsciiDoc Words",
+      "description": "AsciiDoc specific word list. Precede word with '!' to make word case sensitive.",
+      "type": "array",
+      "default": [],
+      "order": 7
+    },
+    "markdownWords": {
+      "description": "Markdown specific word list. Precede word with '!' to make word case sensitive.",
+      "type": "array",
+      "default": [],
+      "order": 8
     }
   },
   "standard": {
@@ -89,6 +114,11 @@
         "1.0.0": "consumeGrammar"
       }
     },
+    "linter-spell-dictionary": {
+      "versions": {
+        "1.0.0": "consumeDictionary"
+      }
+    },
     "linter-plus-self": {
       "versions": {
         "0.1.0": "consumeLinter"
@@ -104,6 +134,11 @@
     "linter-spell-grammar": {
       "versions": {
         "1.0.0": "provideGrammar"
+      }
+    },
+    "linter-spell-dictionary": {
+      "versions": {
+        "1.0.0": "provideDictionary"
       }
     },
     "intentions:list": {
