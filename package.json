@@ -24,7 +24,8 @@
     "atom-package-deps": "^4.0.0",
     "language-tags": "^1.0.0",
     "atom-space-pen-views": "^2.2.0",
-    "linter-spell-word-list": "^0.3.1"
+    "linter-spell-word-list": "^0.4.0",
+    "natural": "^0.4.0"
   },
   "devDependencies": {
     "xml2js": "^0.4.0",
