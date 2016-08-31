@@ -32,40 +32,28 @@ Manual language selection can be done by clicking on the status bar language
 indicator or by using the default keybinding <kbd>alt</kbd>+<kbd>y</kbd> on
 Linux or <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>y</kbd> on other platforms.
 
-## Grammar Providers
+## Grammar and Dictionary Providers
 
 Spell checking plain text, Markdown, or AsciiDoc documents is included in the
 package. To spell check other document types use a `linter-spell-grammar`
-provider:
+provider. To use additional dictionaries use `linter-spell-dictionary` provider.
+Current providers are listed in the table below.
 
-| Grammar                  | Spell Package                                                                               | Grammar Package                                                                                                                              | File Specific Language              |
-|--------------------------|---------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| AsciiDoc                 | Included in linter&#x2011;spell                                                             | [language&#x2011;asciidoc](http://atom.io/packages/language-asciidoc)                                                                        | `:lang:` attribute                  |
-| Git Commit Message       | Included in linter&#x2011;spell                                                             | [language&#x2011;git](http://atom.io/packages/language-git)                                                                                  | None                                |
-| GitHub flavored Markdown | Included in linter&#x2011;spell                                                             | [language&#x2011;gfm](http://atom.io/packages/language-gfm)                                                                                  | None                                |
-| HTML                     | [linter&#x2011;spell&#x2011;html](http://atom.io/packages/linter-spell-html)                | [language&#x2011;html](http://atom.io/packages/language-html)                                                                                | `lang` attribute                    |
-| Javascript               | [linter&#x2011;spell&#x2011;javascript](http://atom.io/packages/linter-spell-javascript)    | [language&#x2011;javascript](http://atom.io/packages/language-javascript) or [language&#x2011;babel](http://atom.io/packages/language-babel) | None                                |
-| JSON                     | [linter&#x2011;spell&#x2011;javascript](http://atom.io/packages/linter-spell-javascript)    | [language&#x2011;json](http://atom.io/packages/language-json)                                                                                | None                                |
-| LaTeX, TeX &amp; BibTeX  | [linter&#x2011;spell&#x2011;latex](http://atom.io/packages/linter-spell-latex)              | [language&#x2011;tex](http://atom.io/packages/language-tex) (preferred) or [language&#x2011;latex](http://atom.io/packages/language-latex)   | `%!TeX spellcheck` magic comment    |
-| LaTeX                    | [linter&#x2011;spell&#x2011;latexsimple](https://atom.io/packages/linter-spell-latexsimple) | [language&#x2011;latexsimple](https://atom.io/packages/language-latexsimple)                                                                 | None                                |
-| Markdown                 | Included in linter&#x2011;spell                                                             | [language&#x2011;markdown](http://atom.io/packages/language-markdown)                                                                        | None                                |
-| Plain Text               | Included in linter&#x2011;spell                                                             | [language&#x2011;text](http://atom.io/packages/language-text)                                                                                | None                                |
-| Ruby                     | [linter&#x2011;spell&#x2011;ruby](http://atom.io/packages/linter-spell-ruby)                | [language&#x2011;ruby](http://atom.io/packages/language-ruby)                                                                                | None                                |
-
-## Dictionary providers
-
-linter-spell can use multiple dictionary providers. A dictionary provider can
-check for misspellings and may allow the user to add words to the provider's
-dictionary. The current dictionary providers are listed below.
-
-| Grammar            | Languages | Dictionary Package                                                                 | Purpose                                            |
-|--------------------|-----------|------------------------------------------------------------------------------------|----------------------------------------------------|
-| All                | All       | Included in linter&#x2011;spell                                                    | Ispell compatible spell checking and word breaking |
-| All                | All       | [linter&#x2011;spell&#x2011;project](http://atom.io/packages/linter-spell-project) | Project specific dictionaries                      |
-| AsciiDoc           | All       | Included in linter&#x2011;spell                                                    | Language specific dictionary                       |
-| Git Commit Message | All       | Included in linter&#x2011;spell                                                    | Language specific dictionary                       |
-| Markdown           | All       | Included in linter&#x2011;spell                                                    | Language specific dictionary                       |
-| Plain Text         | All       | Included in linter&#x2011;spell                                                    | Language specific dictionary                       |
+| Purpose                                                  | Package                                                                                     | Type               | Dependencies                                                                                                                                 | File Specific Language              |
+|----------------------------------------------------------|---------------------------------------------------------------------------------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| Ispell compatible spell checking and word breaking       | Included in linter&#x2011;spell                                                             | Dictionary         | None                                                                                                                                         | N/A                                 |
+| Project specific dictionaries                            | [linter&#x2011;spell&#x2011;project](http://atom.io/packages/linter-spell-project)          | Dictionary         | None                                                                                                                                         | N/A                                 |
+| AsciiDoc spell checking and dictionaries                 | Included in linter&#x2011;spell                                                             | Dictionary/Grammar | [language&#x2011;asciidoc](http://atom.io/packages/language-asciidoc)                                                                        | `:lang:` attribute                  |
+| Git Commit Message spell checking and dictionaries       | Included in linter&#x2011;spell                                                             | Dictionary/Grammar | [language&#x2011;git](http://atom.io/packages/language-git)                                                                                  | None                                |
+| GitHub flavored Markdown spell checking and dictionaries | Included in linter&#x2011;spell                                                             | Dictionary/Grammar | [language&#x2011;gfm](http://atom.io/packages/language-gfm)                                                                                  | None                                |
+| HTML spell checking and dictionaries                     | [linter&#x2011;spell&#x2011;html](http://atom.io/packages/linter-spell-html)                | Dictionary/Grammar | [language&#x2011;html](http://atom.io/packages/language-html)                                                                                | `lang` attribute                    |
+| Javascript spell checking and dictionaries               | [linter&#x2011;spell&#x2011;javascript](http://atom.io/packages/linter-spell-javascript)    | Dictionary/Grammar | [language&#x2011;javascript](http://atom.io/packages/language-javascript) or [language&#x2011;babel](http://atom.io/packages/language-babel) | None                                |
+| JSON spell checking and dictionaries                     | [linter&#x2011;spell&#x2011;javascript](http://atom.io/packages/linter-spell-javascript)    | Dictionary/Grammar | [language&#x2011;json](http://atom.io/packages/language-json)                                                                                | None                                |
+| LaTeX, TeX &amp; BibTeX spell checking and dictionaries  | [linter&#x2011;spell&#x2011;latex](http://atom.io/packages/linter-spell-latex)              | Dictionary/Grammar | [language&#x2011;tex](http://atom.io/packages/language-tex) (preferred) or [language&#x2011;latex](http://atom.io/packages/language-latex)   | `%!TeX spellcheck` magic comment    |
+| LaTeX spell checking                                     | [linter&#x2011;spell&#x2011;latexsimple](https://atom.io/packages/linter-spell-latexsimple) | Grammar            | [language&#x2011;latexsimple](https://atom.io/packages/language-latexsimple)                                                                 | None                                |
+| Markdown spell checking and dictionaries                 | Included in linter&#x2011;spell                                                             | Dictionary/Grammar | [language&#x2011;markdown](http://atom.io/packages/language-markdown)                                                                        | None                                |
+| Plain Text spell checking and dictionaries               | Included in linter&#x2011;spell                                                             | Dictionary/Grammar | [language&#x2011;text](http://atom.io/packages/language-text)                                                                                | None                                |
+| Ruby spell checking and dictionaries                     | [linter&#x2011;spell&#x2011;ruby](http://atom.io/packages/linter-spell-ruby)                | Dictionary/Grammar | [language&#x2011;ruby](http://atom.io/packages/language-ruby)                                                                                | None                                |
 
 ## Creating New Grammar Providers
 
