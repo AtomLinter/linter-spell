@@ -1,5 +1,16 @@
 # Change Log
 
+## [0.12.0](https://github.com/yitzchak/linter-spell/tree/0.12.0) (2016-09-03)
+[Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.11.2...0.12.0)
+
+**Implemented enhancements:**
+
+- Add dictionary provider service [\#28](https://github.com/yitzchak/linter-spell/issues/28)
+- Dictionary provider service [\#29](https://github.com/yitzchak/linter-spell/pull/29) ([yitzchak](https://github.com/yitzchak))
+
+## [v0.11.2](https://github.com/yitzchak/linter-spell/tree/v0.11.2) (2016-08-24)
+[Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.11.1...v0.11.2)
+
 ## [v0.11.1](https://github.com/yitzchak/linter-spell/tree/v0.11.1) (2016-08-20)
 [Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.11.0...v0.11.1)
 
@@ -12,6 +23,10 @@
 
 ## [v0.10.3](https://github.com/yitzchak/linter-spell/tree/v0.10.3) (2016-08-16)
 [Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.10.2...v0.10.3)
+
+**Fixed bugs:**
+
+- Unable to find Dictionary en-us  [\#22](https://github.com/yitzchak/linter-spell/issues/22)
 
 ## [v0.10.2](https://github.com/yitzchak/linter-spell/tree/v0.10.2) (2016-08-16)
 [Full Changelog](https://github.com/yitzchak/linter-spell/compare/v0.10.1...v0.10.2)
