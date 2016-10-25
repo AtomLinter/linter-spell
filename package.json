@@ -94,6 +94,7 @@
   "standard": {
     "parser": "babel-eslint",
     "globals": [
+      "HTMLDivElement",
       "atom",
       "latex",
       "afterEach",
