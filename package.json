@@ -1,7 +1,7 @@
 {
   "name": "linter-spell",
   "main": "./lib/main",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "description": "Multilingual grammar-specific spell checking using Ispell-interface such as Aspell or Hunspell.",
   "author": "Tarn Burton <twburton@gmail.com>",
   "keywords": [
