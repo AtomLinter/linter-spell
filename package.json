@@ -33,8 +33,7 @@
     "semver": "^5.3.0"
   },
   "package-deps": [
-    "linter",
-    "intentions"
+    "linter"
   ],
   "configSchema": {
     "spellPath": {
@@ -121,11 +120,6 @@
         "1.0.0": "consumeDictionary"
       }
     },
-    "linter-plus-self": {
-      "versions": {
-        "0.1.0": "consumeLinter"
-      }
-    },
     "status-bar": {
       "versions": {
         "^1.0.0": "consumeStatusBar"
@@ -143,14 +137,9 @@
         "1.0.0": "provideDictionary"
       }
     },
-    "intentions:list": {
-      "versions": {
-        "1.0.0": "provideIntentions"
-      }
-    },
     "linter": {
       "versions": {
-        "1.0.0": "provideLinter"
+        "2.0.0": "provideLinter"
       }
     }
   }
