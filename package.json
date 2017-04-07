@@ -10,19 +10,19 @@
     "asciidoc",
     "markdown"
   ],
-  "repository": "https://github.com/yitzchak/linter-spell",
+  "repository": "https://github.com/AtomLinter/linter-spell",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0"
   },
   "bugs": {
-    "url": "https://github.com/yitzchak/linter-spell/issues"
+    "url": "https://github.com/AtomLinter/linter-spell/issues"
   },
   "dependencies": {
     "atom-package-deps": "^4.4.1",
     "atom-space-pen-views": "^2.2.0",
     "language-tags": "^1.0.5",
-    "linter-spell-word-list": "^0.4.1",
+    "linter-spell-word-list": "^0.4.2",
     "lodash": "^4.17.4",
     "natural": "^0.5.0",
     "os-locale": "^2.0.0"
