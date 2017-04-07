@@ -44,6 +44,7 @@ D/G=Dictionary/Grammar).
 
 | Purpose                                 | Package                                                                                     | Type | Dependencies                                                                                                                                 |
 |:----------------------------------------|:--------------------------------------------------------------------------------------------|:----:|:---------------------------------------------------------------------------------------------------------------------------------------------|
+| Ignore CJK words                        | [linter&#x2011;spell&#x2011;cjk](https://atom.io/packages/linter-spell-cjk)                 | D    | None                                                                                                                                         |
 | Ispell compatible spell checking        | Included in linter&#x2011;spell                                                             | D    | None                                                                                                                                         |
 | Project specific dictionaries           | [linter&#x2011;spell&#x2011;project](http://atom.io/packages/linter-spell-project)          | D    | None                                                                                                                                         |
 | AsciiDoc spell checking                 | Included in linter&#x2011;spell                                                             | D/G  | [language&#x2011;asciidoc](http://atom.io/packages/language-asciidoc)                                                                        |
@@ -57,6 +58,7 @@ D/G=Dictionary/Grammar).
 | Markdown spell checking                 | Included in linter&#x2011;spell                                                             | D/G  | [language&#x2011;markdown](http://atom.io/packages/language-markdown)                                                                        |
 | Plain Text spell checking               | Included in linter&#x2011;spell                                                             | D/G  | [language&#x2011;text](http://atom.io/packages/language-text)                                                                                |
 | Ruby spell checking                     | [linter&#x2011;spell&#x2011;ruby](http://atom.io/packages/linter-spell-ruby)                | D/G  | [language&#x2011;ruby](http://atom.io/packages/language-ruby)                                                                                |
+| Shell script spell checking             | [linter&#x2011;spell&#x2011;shellscript](https://atom.io/packages/linter-spell-shellscript) | D/G  | [language&#x2011;shellscript](http://atom.io/packages/language-shellscript)                                                                  |
 
 ## Creating New Grammar Providers
 
