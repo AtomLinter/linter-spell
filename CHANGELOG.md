@@ -1,5 +1,16 @@
 # Change Log
 
+## [v0.13.1](https://github.com/AtomLinter/linter-spell/tree/v0.13.1) (2017-04-08)
+[Full Changelog](https://github.com/AtomLinter/linter-spell/compare/v0.13.0...v0.13.1)
+
+**Closed issues:**
+
+- Package missing? [\#48](https://github.com/AtomLinter/linter-spell/issues/48)
+
+**Merged pull requests:**
+
+- Migrate to Atom Linter org [\#49](https://github.com/AtomLinter/linter-spell/pull/49) ([yitzchak](https://github.com/yitzchak))
+
 ## [v0.13.0](https://github.com/AtomLinter/linter-spell/tree/v0.13.0) (2017-03-16)
 [Full Changelog](https://github.com/AtomLinter/linter-spell/compare/v0.12.6...v0.13.0)
 
