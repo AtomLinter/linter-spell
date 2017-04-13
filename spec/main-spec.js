@@ -1,24 +1,21 @@
 'use babel'
 
-import * as _ from 'lodash'
+import { beforeEach, it } from 'jasmine-fix'
 import * as path from 'path'
 
 describe('The Ispell provider for Atom Linter', () => {
-  const lint = require('../lib/providers').provideLinter().lint
+  let lint
 
-  beforeEach(() => {
-    waitsForPromise(() => {
-      return atom.packages.activatePackage('linter-spell')
-    })
+  beforeEach(async () => {
+    await atom.packages.activatePackage('linter-spell')
+    const main = require('../lib/main.js')
+    const linterProvider = main.provideLinter()
+    lint = linterProvider.lint
   })
 
-  it('finds a spelling in "foo.txt"', () => {
-    waitsForPromise(() => {
-      return atom.workspace.open(path.join(__dirname, 'files', 'foo.txt')).then(editor => {
-        return lint(editor).then(messages => {
-          expect(_.some(messages, (message) => { return message.excerpt.match(/^armour( ->|$)/) })).toBe(true)
-        })
-      })
-    })
+  it('finds a spelling in "foo.txt"', async () => {
+    const editor = await atom.workspace.open(path.join(__dirname, 'files', 'foo.txt'))
+    const messages = await lint(editor)
+    expect(messages.some((message) => { return message.excerpt.match(/^armour( ->|$)/) })).toBe(true)
   })
 })
