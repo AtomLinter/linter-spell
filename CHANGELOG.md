@@ -1,9 +1,17 @@
 # Change Log
 
-## [v0.13.1](https://github.com/AtomLinter/linter-spell/tree/v0.13.1) (2017-04-08)
+## [v0.13.2](https://github.com/AtomLinter/linter-spell/tree/v0.13.2) (2017-05-04)
+[Full Changelog](https://github.com/AtomLinter/linter-spell/compare/v0.13.1...v0.13.2)
+
+**Fixed bugs:**
+
+- Install fail [\#50](https://github.com/AtomLinter/linter-spell/issues/50)
+- Pin natural to v0.5.0 [\#51](https://github.com/AtomLinter/linter-spell/pull/51) ([Arcanemagus](https://github.com/Arcanemagus))
+
+## [v0.13.1](https://github.com/AtomLinter/linter-spell/tree/v0.13.1) (2017-04-09)
 [Full Changelog](https://github.com/AtomLinter/linter-spell/compare/v0.13.0...v0.13.1)
 
-**Closed issues:**
+**Fixed bugs:**
 
 - Package missing? [\#48](https://github.com/AtomLinter/linter-spell/issues/48)
 
