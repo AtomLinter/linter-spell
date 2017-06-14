@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.14.0](https://github.com/AtomLinter/linter-spell/tree/v0.14.0) (2017-06-14)
+[Full Changelog](https://github.com/AtomLinter/linter-spell/compare/v0.13.2...v0.14.0)
+
+**Merged pull requests:**
+
+- Added option to change spelling error severity [\#56](https://github.com/AtomLinter/linter-spell/pull/56) ([sebflipper](https://github.com/sebflipper))
+
 ## [v0.13.2](https://github.com/AtomLinter/linter-spell/tree/v0.13.2) (2017-05-04)
 [Full Changelog](https://github.com/AtomLinter/linter-spell/compare/v0.13.1...v0.13.2)
 
