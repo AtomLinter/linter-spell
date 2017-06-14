@@ -57,11 +57,12 @@
       "default": "",
       "order": 3
     },
-    "showSpellErrorAsInfo": {
-      "title": "Show spelling errors with blue underline (requires restart)",
-      "description": "Shows spelling errors with a blue underline (info severity), rather than the orange underline (warning severity).",
-      "type": "boolean",
-      "default": false,
+    "spellingErrorSeverity": {
+      "title": "Spelling error severity",
+      "description": "Show spelling errors with a blue underline (info severity), orange underline (warning severity), or red underline (error severity).",
+      "type": "string",
+      "enum" : ["info", "warning", "error"],
+      "default" : "warning",
       "order": 4
     },
     "checkForSpellCheck": {

@@ -5,7 +5,7 @@
 
 **Merged pull requests:**
 
-- Added option to show spelling errors with blue underline [\#56](https://github.com/AtomLinter/linter-spell/pull/56) ([sebflipper](https://github.com/sebflipper))
+- Added option to change spelling error severity [\#56](https://github.com/AtomLinter/linter-spell/pull/56) ([sebflipper](https://github.com/sebflipper))
 
 ## [v0.13.2](https://github.com/AtomLinter/linter-spell/tree/v0.13.2) (2017-05-04)
 [Full Changelog](https://github.com/AtomLinter/linter-spell/compare/v0.13.1...v0.13.2)
