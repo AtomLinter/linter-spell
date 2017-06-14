@@ -57,37 +57,44 @@
       "default": "",
       "order": 3
     },
+    "showSpellErrorAsInfo": {
+      "title": "Show spelling errors with blue underline (requires restart)",
+      "description": "Shows spelling errors with a blue underline (info severity), rather than the orange underline (warning severity).",
+      "type": "boolean",
+      "default": false,
+      "order": 4
+    },
     "checkForSpellCheck": {
       "title": "Check for spell-check package",
       "description": "Check for an active spell-check package and warn user about incompatibility.",
       "type": "boolean",
       "default": true,
-      "order": 4
+      "order": 5
     },
     "plainTextWords": {
       "description": "Plain text specific word list. Precede word with '!' to make word case sensitive.",
       "type": "array",
       "default": [],
-      "order": 5
+      "order": 6
     },
     "gitCommitWords": {
       "description": "GIT commit specific word list. Precede word with '!' to make word case sensitive.",
       "type": "array",
       "default": [],
-      "order": 6
+      "order": 7
     },
     "asciiDocWords": {
       "title": "AsciiDoc Words",
       "description": "AsciiDoc specific word list. Precede word with '!' to make word case sensitive.",
       "type": "array",
       "default": [],
-      "order": 7
+      "order": 8
     },
     "markdownWords": {
       "description": "Markdown specific word list. Precede word with '!' to make word case sensitive.",
       "type": "array",
       "default": [],
-      "order": 8
+      "order": 9
     }
   },
   "standard": {
