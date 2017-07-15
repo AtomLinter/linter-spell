@@ -22,9 +22,9 @@
     "atom-package-deps": "^4.4.1",
     "atom-space-pen-views": "^2.2.0",
     "language-tags": "^1.0.5",
-    "linter-spell-word-list": "^0.4.2",
+    "linter-spell-word-list": "^0.5.0",
     "lodash": "^4.17.4",
-    "natural": "0.5.0",
+    "jaro-winkler": "^0.2.8",
     "os-locale": "^2.0.0"
   },
   "devDependencies": {
