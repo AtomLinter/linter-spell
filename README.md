@@ -3,7 +3,7 @@
 [![Travis&#x2011;CI Build Status](http://img.shields.io/travis/AtomLinter/linter-spell/master.svg?label=Linux/OSX%20build)](http://travis-ci.org/AtomLinter/linter-spell)
 [![AppVeyor Build Status](http://img.shields.io/appveyor/ci/yitzchak/linter-spell/master.svg?label=Windows%20build)](http://ci.appveyor.com/project/yitzchak/linter-spell)
 [![dependencies Status](http://img.shields.io/david/AtomLinter/linter-spell.svg)](http://david-dm.org/AtomLinter/linter-spell)
-[![devDependencies Status](https://david-dm.org/AtomLinter/linter-spell/dev-status.svg)](https://david-dm.org/AtomLinter/linter-spell?type=dev)
+[![devDependencies Status](https://david-dm.org/AtomLinter/linter-spell/dev-status.svg)](https://david-dm.org/AtomLinter/linter-spell?type=dev) [![Greenkeeper badge](https://badges.greenkeeper.io/AtomLinter/linter-spell.svg)](https://greenkeeper.io/)
 
 Multilingual grammar-specific spell checking for [Atom](http://atom.io) and
 [linter](http://atom.io/packages/linter) using Ispell compatible interface such
